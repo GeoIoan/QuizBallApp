@@ -8,5 +8,7 @@ namespace QuizBall.Repositories
     {
         Task<IEnumerable<Game>> GetAllGamesByGamemasterAsync(int gamemasterId);
         Task<IEnumerable<Game>> GetGameByParticipantsAsync(int gamemasterId, int participantId1, int participantId2);
+
+        Task AddQuestionToGame(int gameId, Question question);
     }
 }

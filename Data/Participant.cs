@@ -22,4 +22,9 @@ public partial class Participant
     public virtual ICollection<Game> GameParticipant2s { get; set; } = new List<Game>();
 
     public virtual Gamemaster? Gamemaster { get; set; }
+
+    public override string? ToString()
+    {
+        return $"Id: {Id}, Type: {Type}, Members: {Members}, Wins: {Wins}, Gamemaster: {GamemasterId}";
+    }
 }

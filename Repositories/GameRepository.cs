@@ -24,5 +24,19 @@ namespace QuizBall.Repositories
 
             return games;
         }
+
+        public async Task AddQuestionToGame(int gameId, Question question)
+        {
+
+            var game = await _context.Games
+                .Include(g => g.Questions)
+                .FirstOrDefaultAsync(g => g.Id == gameId);
+
+            game!.Questions.Add(question);
+
+
+            await _context.SaveChangesAsync();
+        }
     }
 }
+

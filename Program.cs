@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using QuizballApp.Configuration;
 using QuizballApp.Data;
 using UsersApp.Repositories;
 
@@ -17,6 +18,7 @@ namespace QuizballApp
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAutoMapper(typeof(MapperConfig));
             builder.Services.AddDbContext<QuizballDbContext>(options => options.UseSqlServer(connString));
             builder.Services.AddRepositories();
 

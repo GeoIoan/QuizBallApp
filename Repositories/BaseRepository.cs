@@ -15,10 +15,13 @@ namespace QuizBall.Repositories
             _table = context.Set<T>();
         }
 
-        public virtual async Task AddAsync(T entity)
+        public virtual async Task<T?> AddAsync(T entity)
         {
-            await _table.AddAsync(entity);
+            var entry = await _table.AddAsync(entity);
+
+            return entry.Entity;
         }
+            
 
         public virtual async Task<bool> DeleteAsync(int id)
         {

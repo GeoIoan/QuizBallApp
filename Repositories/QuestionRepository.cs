@@ -9,10 +9,9 @@ namespace QuizBall.Repositories
        
         public async Task<IEnumerable<Question>> GetCustomQuestionsAsync(int gamemasterId)
         {
-            var customQuestions = await _context.Questions
-                                .Where(q => q.GamemasterId == gamemasterId)
-                                .Where(q => !_context.Games.Any(g => g.GamemasterId == gamemasterId))
-                                .ToListAsync();
+            var customQuestions = await _context.Questions.Where(q => q.GamemasterId == gamemasterId &&
+                                         _context.Games.All(g => !g.Questions.Contains(q)))
+                                        .ToListAsync();
 
             return customQuestions;
         }
@@ -30,6 +29,25 @@ namespace QuizBall.Repositories
             int randomIndex = random.Next(0, filteredQuestions.Count);
 
             return filteredQuestions[randomIndex];
+        }
+
+        public async Task AddGameToQuestion(int questionId, Game game)
+        {
+            var question = await _context.Questions
+                .FirstOrDefaultAsync(q => q.Id == questionId);
+
+            question!.Games.Add(game);
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Question>> GetCustQuestionsByCatAsync(int catId, int gamemaster)
+        {
+            var questions = await _context.Questions.Where(q => (q.GamemasterId == gamemaster) 
+                                                           && (q.CategoryId == catId))
+                                                           .ToListAsync();
+
+            return questions;
         }
     }
 }
