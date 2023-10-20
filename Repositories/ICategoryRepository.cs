@@ -1,6 +1,6 @@
 ﻿namespace QuizBall.Repositories
 {
-    public interface ICategoryRepository
+    public interface ICategoryRepository 
     {
     }
 }

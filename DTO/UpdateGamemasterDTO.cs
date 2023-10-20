@@ -18,5 +18,19 @@ namespace QuizballApp.DTO
         [Required(ErrorMessage = ("This field is required"))]
         [EmailAddress(ErrorMessage = ("Please provide a valid email adress"))]
         public string? Email { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is UpdateGamemasterDTO dTO &&
+                   Id == dTO.Id &&
+                   Username == dTO.Username &&
+                   Password == dTO.Password &&
+                   Email == dTO.Email;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Username, Password, Email);
+        }
     }
 }

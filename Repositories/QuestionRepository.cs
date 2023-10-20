@@ -31,7 +31,7 @@ namespace QuizBall.Repositories
             return filteredQuestions[randomIndex];
         }
 
-        public async Task AddGameToQuestion(int questionId, Game game)
+        public async Task<bool> AddGameToQuestion(int questionId, Game game)
         {
             var question = await _context.Questions
                 .FirstOrDefaultAsync(q => q.Id == questionId);
@@ -39,6 +39,8 @@ namespace QuizBall.Repositories
             question!.Games.Add(game);
 
             await _context.SaveChangesAsync();
+
+            return question!.Games.Contains(game);
         }
 
         public async Task<IEnumerable<Question>> GetCustQuestionsByCatAsync(int catId, int gamemaster)

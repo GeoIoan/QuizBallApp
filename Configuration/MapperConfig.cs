@@ -8,7 +8,8 @@ namespace QuizballApp.Configuration
     {
         public MapperConfig() 
         {
-            CreateMap<Gamemaster, CreateGamemasterDTO>();
+            CreateMap<Gamemaster,CreateGamemasterDTO>()
+                        .ForMember(dest => dest.ConfirmedPassword, opt => opt.Ignore());
             CreateMap<Gamemaster, UpdateGamemasterDTO>();
             CreateMap<Participant, CreateParticipantDTO>();
             CreateMap<Participant, UpdateParticipantDTO>();

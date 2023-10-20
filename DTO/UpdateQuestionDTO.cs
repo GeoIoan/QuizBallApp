@@ -20,5 +20,22 @@ namespace QuizballApp.DTO
         [StringLength(250, ErrorMessage = "The answer should not exceed 250 characters"),
         Required(ErrorMessage = "This field is required")]
         public string? Answers { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is UpdateQuestionDTO dTO &&
+                   Id == dTO.Id &&
+                   Question == dTO.Question &&
+                   Media == dTO.Media &&
+                   GamemasterId == dTO.GamemasterId &&
+                   CategoryId == dTO.CategoryId &&
+                   DifficultyId == dTO.DifficultyId &&
+                   Answers == dTO.Answers;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Question, Media, GamemasterId, CategoryId, DifficultyId, Answers);
+        }
     }
 }

@@ -18,4 +18,18 @@ public partial class Gamemaster
     public virtual ICollection<Participant> Participants { get; set; } = new List<Participant>();
 
     public virtual ICollection<Question> Questions { get; set; } = new List<Question>();
+
+    public override bool Equals(object? obj)
+    {
+        return obj is Gamemaster gamemaster &&
+               Id == gamemaster.Id &&
+               Username == gamemaster.Username &&
+               Password == gamemaster.Password &&
+               Email == gamemaster.Email;
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Id, Username, Password, Email);
+    }
 }

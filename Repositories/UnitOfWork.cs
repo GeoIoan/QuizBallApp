@@ -13,15 +13,15 @@ namespace QuizBall.Repositories
             _context = context;
         }
 
-        public IGameRepository GameRepository => new GameRepository(_context);
+        public GameRepository GameRepository => new GameRepository(_context);
 
-        public IGamemasterRepository GamemasterRepository => new GamemasterRepository(_context);
+        public GamemasterRepository GamemasterRepository => new GamemasterRepository(_context);
 
-        public IQuestionRepository QuestionRepository => new QuestionRepository(_context);
+        public QuestionRepository QuestionRepository => new QuestionRepository(_context);
 
-        public IParticipantRepository ParticipantRepository => new ParticipantRepository(_context);
+        public ParticipantRepository ParticipantRepository => new ParticipantRepository(_context);
 
-        public ICategoryRepository CategoryRepository => new CategoryRepository(_context);
+        public CategoryRepository CategoryRepository => new CategoryRepository(_context);
 
         public async Task<bool> SaveAsync()
         {

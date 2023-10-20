@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
+using QuizballApp.DTO;
 
 namespace QuizBall.Repositories
 {
@@ -25,7 +26,7 @@ namespace QuizBall.Repositories
             return games;
         }
 
-        public async Task AddQuestionToGame(int gameId, Question question)
+        public async Task<bool> AddQuestionToGame(int gameId, Question question)
         {
 
             var game = await _context.Games
@@ -36,6 +37,21 @@ namespace QuizBall.Repositories
 
 
             await _context.SaveChangesAsync();
+
+            return game!.Questions.Contains(question);
+        }
+
+        public async Task<Game?> GamesEndUpdate(GamesEndDTO dto)
+        {
+            var game = await _context.Games.Where(g => g.Id == dto.Id).FirstAsync();
+            if (game is null) return null;
+
+            game.Winner = dto.Winner;
+            game.EndDate = dto.EndDate;
+            game.Duration = dto.Duration;
+
+            _context.Games.Update(game);
+            return game;
         }
     }
 }
