@@ -34,4 +34,6 @@ public partial class Game
     public virtual Participant? Participant2 { get; set; }
 
     public virtual ICollection<Question> Questions { get; set; } = new List<Question>();
+
+
 }

@@ -8,6 +8,9 @@ namespace QuizballApp.Services
         Task<Gamemaster?> SingUpAsync(CreateGamemasterDTO dto);
         Task<Gamemaster?> UpdateGamemasterAsync(UpdateGamemasterDTO dto);
         Task<Gamemaster?> DeleteGamemasterAsync(int id);
-        Task<Gamemaster?> GetGamemasterByUsernameAsync(string username);
+     
+        Task<bool> IsUsernameAvailable(int gamemasterId, string username);
+
+        Task<GamemasterReadOnlyDTO?> GetGamemasterAsync(int id);
     }
 }

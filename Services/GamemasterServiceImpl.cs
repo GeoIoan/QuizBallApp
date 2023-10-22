@@ -15,7 +15,7 @@ namespace QuizballApp.Services
         private readonly Serilog.ILogger _logger;
 
 
-        public GamemasterServiceImpl(IUnitOfWork unitOfWork, IMapper mapper, ILogger<GamemasterServiceImpl> logger)
+        public GamemasterServiceImpl(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -46,16 +46,37 @@ namespace QuizballApp.Services
             }
         }
 
-        public async Task<Gamemaster?> GetGamemasterByUsernameAsync(string username)
+        public async Task<GamemasterReadOnlyDTO?> GetGamemasterAsync(int id)
         {
             try
             {
-                var gm = await _unitOfWork.GamemasterRepository.GetByUsernameAsync(username);
-                return gm;
+                var gm = await _unitOfWork.GamemasterRepository.GetAsync(id);
+                await _unitOfWork.SaveAsync();
+                if (gm is null)
+                {
+                    _logger.Error("Something went wrong while getting gamemaster " + id);
+                    return null;
+                }
+                return _mapper.Map<GamemasterReadOnlyDTO>(gm);
+            }
+            catch(DbException e)
+            {
+                _logger.Error("Could not get gamemaster " + id + " due to a server error");
+                throw;
+            }
+        }
+
+        public async Task<bool> IsUsernameAvailable(int gamemasterId ,string username)
+        {
+            try
+            {
+                var isAvailable =  await _unitOfWork.GamemasterRepository.CheckUsernameAsync(gamemasterId, username);
+                await _unitOfWork.SaveAsync();
+                return isAvailable;
             }
             catch (DbUpdateException e)
             {
-                _logger.Error("Could not get gamemaster by username " + username + " due to a server error");
+                _logger.Error("Could not check username " + username + " due to a server error");
                 throw;
             }
         }
@@ -84,22 +105,40 @@ namespace QuizballApp.Services
         {
             try
             {
-                _unitOfWork.GamemasterRepository.UpdateAsync(_mapper.Map<Gamemaster>(dto));
+                await Console.Out.WriteLineAsync("Dto for update: " + dto);
+                await _unitOfWork.GamemasterRepository.UpdateAsync(dto.Id, _mapper.Map<Gamemaster>(dto));
+                await Console.Out.WriteLineAsync("we are here!");
+                
                 var gm = await _unitOfWork.GamemasterRepository.GetAsync(dto.Id);
+               
+
+                await Console.Out.WriteLineAsync($"{gm}");
+                await Console.Out.WriteLineAsync("Dto for update: " + dto);
+
                 await _unitOfWork.SaveAsync();
 
-                if (gm == null || !gm.Equals(dto))
+                if (gm is null || !AreEquivalent(gm, dto))
                 {
                     _logger.Error("Something went wrong while updating gamemaster " + dto.Id);
                     return null;
                 }
+                
                 return gm;
             }
-            catch (DbUpdateException e)
+            catch (DbException e)
             {
                 _logger.Error("Cound not sign up user with username " + dto.Username + " due to a server error");
                 throw;
             }
+        }
+
+
+        private bool AreEquivalent(Gamemaster gm, UpdateGamemasterDTO dto)
+        {
+            return gm.Id == dto.Id &&
+                   gm.Username == dto.Username &&
+                   gm.Password == dto.Password &&
+                   gm.Email == dto.Email;
         }
     }
 }

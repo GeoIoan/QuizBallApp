@@ -24,5 +24,12 @@ namespace QuizBall.Repositories
 
             return participant;
         }
+
+        public async Task<bool> CheckParticipantsName(int gamemasterid, string participantsName)
+        {
+            var participant = await _context.Participants.Where(p => (p.GamemasterId == gamemasterid) && (p.Name == participantsName)).FirstAsync();
+            if (participant is null) return true;
+            else return false;
+        }
     }
 }

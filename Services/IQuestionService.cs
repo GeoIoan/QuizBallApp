@@ -5,12 +5,12 @@ namespace QuizballApp.Services
 {
     public interface IQuestionService
     {
-        Task<Question> CreateCustomQuestionAsync(CreateQuestionDTO dto);
-        Task<Question> UpdateCustomQuestionAsync(UpdateQuestionDTO dto);
-        Task<Question> DeleteCustomQuestionAsync(int id);
-        Task<IList<Question>> GetCustomQuestionsAsync(int gamemasterId);
-        Task<Question> GetRandomQuestionAsync(SelectQuestionDTO dto);
-        Task<bool> AddGameAsync(int questionId, Game game);
-        Task<IList<Question>> GetCustQuestionsByCatAsync(int gamemasterId, int catId);
+        Task<QuestionReadOnlyDTO> CreateCustomQuestionAsync(CreateQuestionDTO dto);
+        Task<QuestionReadOnlyDTO> UpdateCustomQuestionAsync(UpdateQuestionDTO dto);
+        Task<QuestionReadOnlyDTO> DeleteCustomQuestionAsync(int id);
+        Task<IList<QuestionReadOnlyDTO>> GetCustomQuestionsAsync(int gamemasterId);
+        Task<QuestionReadOnlyDTO> GetRandomQuestionAsync(SelectQuestionDTO dto);
+        Task<bool> AddGameAsync(int questionId, InsertGameToQuestionDTO dto);
+        Task<IList<QuestionReadOnlyDTO>> GetCustQuestionsByCatAsync(int gamemasterId, int catId);
     }
 }

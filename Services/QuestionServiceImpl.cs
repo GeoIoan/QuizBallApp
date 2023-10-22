@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Data.Common;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.IdentityModel.Tokens;
@@ -23,69 +24,70 @@ namespace QuizballApp.Services
             _logger = Log.ForContext<GamemasterServiceImpl>();
         }
 
-        public async Task<bool> AddGameAsync(int questionId, Game game)
+        public async Task<bool> AddGameAsync(int questionId, InsertGameToQuestionDTO dto)
         {
-            try 
+            try
             {
-                var added = await _unitOfWork.QuestionRepository.AddGameToQuestion(questionId, game);
+                var added = await _unitOfWork.QuestionRepository.AddGameToQuestion(questionId, _mapper.Map<Game>(dto));
                 await _unitOfWork.SaveAsync();
 
                 if (!added)
                 {
-                    _logger.Error("Something went wrong while adding question " + questionId + " into the " + game.Id + " game's questions list");
+                    _logger.Error("Something went wrong while adding question " + questionId + " into the " + dto.Id + " game's questions list");
                 }
 
                 return added;
-            } catch(DbUpdateException e)
+            } catch (DbException e)
             {
-                _logger.Error("A server error occurred whill trying to add the game " + game.Id + " in the games list of question " + questionId);
+                _logger.Error("A server error occurred whill trying to add the game " + dto.Id + " in the games list of question " + questionId);
                 throw;
             }
         }
 
-        public async Task<Question> CreateCustomQuestionAsync(CreateQuestionDTO dto)
+        public async Task<QuestionReadOnlyDTO> CreateCustomQuestionAsync(CreateQuestionDTO dto)
         {
             try
             {
                 var insertedQuestion = await _unitOfWork.QuestionRepository.AddAsync(_mapper.Map<Question>(dto));
                 await _unitOfWork.SaveAsync();
 
-                if(insertedQuestion == null)
+                if (insertedQuestion == null)
                 {
-                    _logger.Error("Something went wrong while inserting the question " + dto.Question + " made by gamemaster " + dto.GamemasterId);
+                    _logger.Error("Something went wrong while inserting the question " + dto.Question1 + " made by gamemaster " + dto.GamemasterId);
+                    return null!;
                 }
 
-                return insertedQuestion!;
+                return _mapper.Map<QuestionReadOnlyDTO>(insertedQuestion);
             }
-            catch(DbUpdateException e)
+            catch (DbException e)
             {
-                _logger.Error("A server error occurred whille trying to add custom question " + dto.Question + "of gamemaster " + dto.GamemasterId);
+                _logger.Error("A server error occurred whille trying to add custom question " + dto.Question1 + "of gamemaster " + dto.GamemasterId);
                 throw;
             }
         }
 
-        public async Task<Question> DeleteCustomQuestionAsync(int id)
+        public async Task<QuestionReadOnlyDTO> DeleteCustomQuestionAsync(int id)
         {
             try
             {
                 var question = await _unitOfWork.QuestionRepository.GetAsync(id);
                 var deleted = await _unitOfWork.QuestionRepository.DeleteAsync(id);
                 await _unitOfWork.SaveAsync();
-                if (deleted) return question!;
-                else 
+                if (deleted) return _mapper.Map<QuestionReadOnlyDTO>(question);
+                else
                 {
                     _logger.Error("Something went wrong while deleting question " + id);
-                    return null!; 
-                }              
+                    return null!;
+                }
             }
-            catch (DbUpdateException e)
+            catch (DbException e)
             {
                 _logger.Error("A server error occurred whille trying to delete custom question " + id + " due to server error");
                 throw;
             }
         }
 
-        public async Task<IList<Question>> GetCustomQuestionsAsync(int gamemasterId)
+        public async Task<IList<QuestionReadOnlyDTO>> GetCustomQuestionsAsync(int gamemasterId)
         {
             try
             {
@@ -93,78 +95,108 @@ namespace QuizballApp.Services
                 if (questions.IsNullOrEmpty())
                 {
                     _logger.Error("Something went wrong while geting the new custom questions of gamemaster " + gamemasterId);
-                    
+
                     if (questions == null) return null!;
                 }
-                
-                return questions.ToList();
-            }catch(DbUpdateException e)
+
+                var questionToReturn = new List<QuestionReadOnlyDTO>();
+
+                questions.ToList().ForEach(q =>
+                {
+                    questionToReturn.Add(_mapper.Map<QuestionReadOnlyDTO>(q));
+                });
+
+                return questionToReturn;
+            }
+            catch (DbException e)
             {
                 _logger.Error("Could not get new custom questions of the gamemaster " + gamemasterId + " due to server error");
                 throw;
             }
         }
 
-        public async Task<IList<Question>> GetCustQuestionsByCatAsync(int gamemasterId, int catId)
+        public async Task<IList<QuestionReadOnlyDTO>> GetCustQuestionsByCatAsync(int gamemasterId, int catId)
         {
             try
             {
                 var questions = await _unitOfWork.QuestionRepository.GetCustQuestionsByCatAsync(catId, gamemasterId);
-                
+
                 if (questions == null)
                 {
-                    _logger.LogError("Something went wrong while getting the custom questions int the " + catId + " category of gamemaster " + gamemasterId);
+                    _logger.Error("Something went wrong while getting the custom questions int the " + catId + " category of gamemaster " + gamemasterId);
                     return null!;
                 }
-                
-                return questions.ToList();
-            } catch(DbUpdateException e)
+
+                var questionToReturn = new List<QuestionReadOnlyDTO>();
+
+                questions.ToList().ForEach(q =>
+                {
+                    questionToReturn.Add(_mapper.Map<QuestionReadOnlyDTO>(q));
+                });
+
+                return questionToReturn;
+            } catch (DbException e)
             {
-                _logger.LogError("Could not get custom questions of the category " + catId + " made by the gamemaster  " + gamemasterId + " due to server error");
+                _logger.Error("Could not get custom questions of the category " + catId + " made by the gamemaster  " + gamemasterId + " due to server error");
                 throw;
             }
         }
 
-        public async Task<Question> GetRandomQuestionAsync(SelectQuestionDTO dto)
+        public async Task<QuestionReadOnlyDTO> GetRandomQuestionAsync(SelectQuestionDTO dto)
         {
             try
             {
                 var question = await _unitOfWork.QuestionRepository.GetRandomQuestionAsync(dto.Gamemaster_id, dto.Category_id, dto.Difficulty_id);
                 if (question == null)
                 {
-                    _logger.LogError("Something went wron while sellectin random question based on the criteria gamemaster: " + dto.Gamemaster_id + " , category:  " + dto.Category_id + " , difficulty level: " + dto.Difficulty_id);
-                    return null!;
-                }
-                
-                return question;
-            }catch (DbUpdateException e)
-            {
-                _logger.LogError("Could not get a random question based on the criteria gamemaster: " + dto.Gamemaster_id + " , category:  " + dto.Category_id + " , difficulty level: " + dto.Difficulty_id + " due to server error");
-                throw;
-             }
-        }
-
-        public async Task<Question> UpdateCustomQuestionAsync(UpdateQuestionDTO dto)
-        {
-           try
-            {
-                var question = new Question();
-               _unitOfWork.QuestionRepository.UpdateAsync(_mapper.Map<Question>(dto));
-                var updatedQuestion = await _unitOfWork.QuestionRepository.GetAsync(dto.Id);
-                await _unitOfWork.SaveAsync();
-                if (updatedQuestion == null || !updatedQuestion.Equals(dto))
-                {
-                    _logger.LogError("Something went wrong whill updating question " + dto.Id);
+                    _logger.Error("Something went wron while sellectin random question based on the criteria gamemaster: " + dto.Gamemaster_id + " , category:  " + dto.Category_id + " , difficulty level: " + dto.Difficulty_id);
                     return null!;
                 }
 
-                return updatedQuestion;
-            } catch (DbUpdateException e)
+                return _mapper.Map<QuestionReadOnlyDTO>(question);
+            }
+            catch (DbException e)
             {
-                _logger.LogError("Could not update the question " + dto.Id + " due to a server error");
+                _logger.Error("Could not get a random question based on the criteria gamemaster: " + dto.Gamemaster_id + " , category:  " + dto.Category_id + " , difficulty level: " + dto.Difficulty_id + " due to server error");
                 throw;
             }
-        
         }
+
+        public async Task<QuestionReadOnlyDTO> UpdateCustomQuestionAsync(UpdateQuestionDTO dto)
+        {
+            try
+            {
+                await _unitOfWork.QuestionRepository.UpdateAsync(dto.Id, _mapper.Map<Question>(dto));
+                var question = await _unitOfWork.QuestionRepository.GetAsync(dto.Id);
+                await _unitOfWork.SaveAsync();
+
+                await Console.Out.WriteLineAsync($"The updated question: " + question);
+
+                if (question is null || !AreEquivalent(question, dto))
+                {
+                    _logger.Error("Something went wrong while updating question " + dto.Id + " of gamemaster " + dto.Id);
+                    return null!;
+                }
+
+                return _mapper.Map<QuestionReadOnlyDTO>(question);
+            }
+            catch (DbException e)
+            {
+                _logger.Error("Could not update question " + dto.Id + " of gamemaster " + dto.GamemasterId + " due to a server error");
+                throw;
+            }
+
+        }
+
+        private bool AreEquivalent(Question question, UpdateQuestionDTO dto)   
+            {
+                return question.Id == dto.Id &&
+                       question.CategoryId == dto.CategoryId &&
+                       question.Media == dto.Media &&
+                       question.GamemasterId == dto.GamemasterId &&
+                       question.DifficultyId == dto.DifficultyId &&
+                       question.Question1 == dto.Question1 &&
+                       question.Answers == dto.Answers;         
+            }
     }
 }

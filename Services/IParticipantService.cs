@@ -5,9 +5,11 @@ namespace QuizballApp.Services
 {
     public interface IParticipantService
     {
-        Task<Participant> CreateParticipantAsync(CreateParticipantDTO dto);
-        Task<Participant> ChangeParticipantsNameAsync(int participantId, string name);
-        Task<Participant> DeleteParticipantAsync(int id);
-        Task<List<Participant>> GetParticipantsByTypeAsync(int gamemasterId, string type);
+        Task<ParticipantReadOnlyDTO> CreateParticipantAsync(CreateParticipantDTO dto);
+        Task<ParticipantReadOnlyDTO> ChangeParticipantsNameAsync(int participantId, string name);
+        Task<ParticipantReadOnlyDTO> DeleteParticipantAsync(int id);
+        Task<List<ParticipantReadOnlyDTO>> GetParticipantsByTypeAsync(int gamemasterId, string type);
+   
+        Task<bool> CheckParticipantsNameAsync(int gamemasterId, string name);
     }
 }

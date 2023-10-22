@@ -8,13 +8,19 @@ namespace QuizballApp.Configuration
     {
         public MapperConfig() 
         {
-            CreateMap<Gamemaster,CreateGamemasterDTO>()
-                        .ForMember(dest => dest.ConfirmedPassword, opt => opt.Ignore());
-            CreateMap<Gamemaster, UpdateGamemasterDTO>();
-            CreateMap<Participant, CreateParticipantDTO>();
-            CreateMap<Participant, UpdateParticipantDTO>();
-            CreateMap<Question, CreateQuestionDTO>();
-            CreateMap<Question, UpdateQuestionDTO>();        
+            CreateMap<CreateGamemasterDTO, Gamemaster>()
+                 .ForSourceMember(x => x.ConfirmedPassword, opt => opt.DoNotValidate());
+            CreateMap<UpdateGamemasterDTO, Gamemaster>()
+                 .ForSourceMember(x => x.ConfirmedPassword, opt => opt.DoNotValidate());
+            CreateMap<CreateParticipantDTO, Participant>();
+            CreateMap<UpdateParticipantDTO, Participant>();
+            CreateMap<CreateQuestionDTO, Question>();
+            CreateMap<UpdateQuestionDTO, Question>();
+            CreateMap<Gamemaster, GamemasterReadOnlyDTO>();
+            CreateMap<Question, QuestionReadOnlyDTO>();
+            CreateMap<InsertGameToQuestionDTO, Game>();
+            CreateMap<Game, GameReadOnlyDTO>();
+            CreateMap<Category, CategoryReadOnlyDTO>();
         }
     }
 }

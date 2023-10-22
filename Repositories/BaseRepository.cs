@@ -46,10 +46,15 @@ namespace QuizBall.Repositories
             return entity;
         }
 
-        public virtual void UpdateAsync(T entity)
+
+        public virtual async Task UpdateAsync(int id,T entity)
         {
-            _table.Attach(entity);
-            _context.Entry(entity).State = EntityState.Modified;
+            var existingEntity = _context.Set<T>().Find(id);
+            if (existingEntity != null)
+            {
+                _context.Entry(existingEntity).CurrentValues.SetValues(entity);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

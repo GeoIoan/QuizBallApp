@@ -20,9 +20,19 @@ namespace QuizBall.Repositories
             return gamemaster;
         }
 
-        public async Task<Gamemaster?> GetByUsernameAsync(string username)
+        public async Task<bool> CheckUsernameAsync(int gamemasterId, string username)
         {
-            return await _context.Gamemasters.Where(g => g.Username == username).FirstOrDefaultAsync();
+            var gm = await _context.Gamemasters.Where(g => g.Username == username).FirstOrDefaultAsync();
+            if ( gm is null) return true;
+            else
+            {
+                if (gamemasterId == 0) return false;
+                else
+                {
+                    if (gamemasterId == gm.Id) return true;
+                    else return false;
+                }
+            }
         }
     }
 }

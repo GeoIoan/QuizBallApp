@@ -1,4 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using QuizballApp.Services;
+
+
 
 namespace QuizballApp.DTO
 {
@@ -9,14 +12,11 @@ namespace QuizballApp.DTO
         public string? Username { get; set; }
 
         [StringLength(32, ErrorMessage = "password should not exceed 32 characters")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*W).{8,}$",
-            ErrorMessage = "Password must contain at least one lower case letter, one upper case letter, one number and one special character")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$",
+    ErrorMessage = "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character")]
         [Required(ErrorMessage = ("This field is required"))]
         public string? Password { get; set; }
 
-        [StringLength(32, ErrorMessage = "password should not exceed 32 characters")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*W).{8,}$",
-           ErrorMessage = "Password must contain at least one lower case letter, one upper case letter, one number and one special character")]
         [Required(ErrorMessage = ("This field is required"))]
         public string? ConfirmedPassword { get; set; }
 

@@ -32,4 +32,9 @@ public partial class Gamemaster
     {
         return HashCode.Combine(Id, Username, Password, Email);
     }
+
+    public override string? ToString()
+    {
+        return $"id: {Id}, username: {Username}, password: {Password}, Email: {Email}";
+    }
 }

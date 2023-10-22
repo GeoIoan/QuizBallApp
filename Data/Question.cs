@@ -55,4 +55,9 @@ public partial class Question
         hash.Add(Answers);
         return hash.ToHashCode();
     }
+
+    public override string? ToString()
+    {
+        return $"id: {Id}, question : {Question1}, media: {Media}, gamemasterid: {GamemasterId}, categoryid: {CategoryId}, difficulty: {DifficultyId}, answer: {Answers}";
+    }
 }

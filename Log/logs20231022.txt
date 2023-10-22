@@ -1,0 +1,781 @@
+[ 22-10-2023 13-11:18 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 13-11:18 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 13-11:18 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 13-11:18 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 13-11:18 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 13-11:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 13-11:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 2965.0836ms 
+ [ 22-10-2023 13-11:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 13-11:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 13-11:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 701.5862ms 
+ [ 22-10-2023 13-11:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - 
+ [ 22-10-2023 13-11:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1094.6838ms 
+ [ 22-10-2023 13-11:29 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' 
+ [ 22-10-2023 13-11:29 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 13-11:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - - 0 628 image/png 2789.7404ms 
+ [ 22-10-2023 13-11:32 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2702.9928ms 
+ [ 22-10-2023 13-14:09 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 13-14:09 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 13-14:09 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 13-14:09 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 13-14:09 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 13-14:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 13-14:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 448.2538ms 
+ [ 22-10-2023 13-14:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 13-14:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 13-14:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 9.7603ms 
+ [ 22-10-2023 13-14:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.3347ms 
+ [ 22-10-2023 13-14:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 13-14:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.7833ms 
+ [ 22-10-2023 13-14:41 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 22-10-2023 13-14:46 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 13-14:46 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 13-14:46 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 13-14:46 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 13-14:46 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 13-14:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 13-14:52 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 1699.3915ms 
+ [ 22-10-2023 13-14:52 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 13-14:52 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 13-14:52 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 194.7742ms 
+ [ 22-10-2023 13-14:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 328.4905ms 
+ [ 22-10-2023 13-14:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 13-14:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 346.8900ms 
+ [ 22-10-2023 13-14:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions/1/3/GetCustomQuestionsByCategory application/json 146 
+ [ 22-10-2023 13-14:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions/1/3/GetCustomQuestionsByCategory application/json 146 - 404 0 - 13.2191ms 
+ [ 22-10-2023 13-15:44 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions/1/5/GetCustomQuestionsByCategory application/json 146 
+ [ 22-10-2023 13-15:45 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions/1/5/GetCustomQuestionsByCategory application/json 146 - 404 0 - 10.4919ms 
+ [ 22-10-2023 13-17:45 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions/1/3 application/json 146 
+ [ 22-10-2023 13-17:45 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetCustomQuestionsByCategory (QuizballApp)"' 
+ [ 22-10-2023 13-17:45 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetCustomQuestionsByCategory\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomQuestionsByCategory(Int32, Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-17:49 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("154"ms) [Parameters=["@__gamemaster_0='?' (DbType = Int32), @__catId_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemaster_0 AND [q].[CATEGORY_ID] = @__catId_1" 
+ [ 22-10-2023 13-17:49 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.QuestionReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 22-10-2023 13-17:49 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetCustomQuestionsByCategory (QuizballApp)" in 3478.6215ms 
+ [ 22-10-2023 13-17:49 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetCustomQuestionsByCategory (QuizballApp)"' 
+ [ 22-10-2023 13-17:49 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions/1/3 application/json 146 - 200 - application/json;+charset=utf-8 3704.0638ms 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions/1/3 application/json 146 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetCustomQuestionsByCategory (QuizballApp)"' 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetCustomQuestionsByCategory\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomQuestionsByCategory(Int32, Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-26:14 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("60"ms) [Parameters=["@__gamemaster_0='?' (DbType = Int32), @__catId_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemaster_0 AND [q].[CATEGORY_ID] = @__catId_1" 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.QuestionReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetCustomQuestionsByCategory (QuizballApp)" in 392.798ms 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetCustomQuestionsByCategory (QuizballApp)"' 
+ [ 22-10-2023 13-26:14 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions/1/3 application/json 146 - 200 - application/json;+charset=utf-8 464.0115ms 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 77 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 171.9858ms 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-28:22 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 77 - 400 - application/problem+json;+charset=utf-8 230.1137ms 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:37 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("63"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 184.2425ms 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 200.8037ms 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:42 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("19"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 29.7217ms 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:42 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 45.0802ms 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:44 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("28"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 42.3022ms 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:44 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 53.0863ms 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:45 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("9"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 18.6961ms 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:45 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 29.6860ms 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:46 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("10"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 20.3892ms 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:46 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 33.0497ms 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:47 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("15"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 23.7055ms 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 41.9138ms 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:47 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("7"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 22.0086ms 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:47 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 38.3461ms 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:48 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("13"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 21.2927ms 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:48 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 34.1449ms 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:49 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("12"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 20.8102ms 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:49 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 33.9105ms 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:50 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("6"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 16.5538ms 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 32.3033ms 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:51 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("6"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 17.2556ms 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 29.6348ms 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-30:58 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("5"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 14.1607ms 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-30:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 27.5279ms 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("8"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 17.063ms 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 31.5950ms 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:01 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("5"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 15.5898ms 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 27.3401ms 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:02 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("5"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 14.8632ms 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 29.4394ms 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:09 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("20"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 37.2774ms 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:09 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 61.4359ms 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:10 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("5"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 15.1028ms 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 30.0516ms 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:11 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("6"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 18.7886ms 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 34.8905ms 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(QuizballApp.DTO.SelectQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-31:12 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("5"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 12.5459ms 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-31:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions application/json 74 - 200 - application/json;+charset=utf-8 20.8735ms 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 GET https://localhost:7053/api/Questions/1 application/json 74 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetCustomQuestions (QuizballApp)"' 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetCustomQuestions\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomQuestions(Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-32:15 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("25"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND NOT EXISTS (
+    SELECT 1
+    FROM [GAMES] AS [g]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [GAMES_QUESTIONS] AS [g0]
+        INNER JOIN [QUESTIONS] AS [q0] ON [g0].[QUESTION_ID] = [q0].[ID]
+        WHERE [g].[ID] = [g0].[GAME_ID] AND [q0].[ID] = [q].[ID]))" 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.QuestionReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetCustomQuestions (QuizballApp)" in 408.6263ms 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetCustomQuestions (QuizballApp)"' 
+ [ 22-10-2023 13-32:15 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 GET https://localhost:7053/api/Questions/1 application/json 74 - 200 - application/json;+charset=utf-8 426.3010ms 
+ [ 22-10-2023 13-32:35 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 DELETE https://localhost:7053/api/Questions/4 application/json 74 
+ [ 22-10-2023 13-32:35 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.DeleteQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-32:35 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"DeleteQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteQuestion(Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-32:35 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 13-32:36 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("37"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [QUESTIONS]
+OUTPUT 1
+WHERE [ID] = @p0;" 
+ [ 22-10-2023 13-32:36 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-32:36 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.DeleteQuestion (QuizballApp)" in 279.3385ms 
+ [ 22-10-2023 13-32:36 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.DeleteQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-32:36 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 DELETE https://localhost:7053/api/Questions/4 application/json 74 - 200 - application/json;+charset=utf-8 297.6299ms 
+ [ 22-10-2023 13-37:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 POST https://localhost:7053/api/Questions/ application/json 154 
+ [ 22-10-2023 13-37:05 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-37:05 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[QuizballApp.Data.Question]] PostQuestion(QuizballApp.DTO.CreateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-37:05 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("62"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 250) (DbType = AnsiString), @p5='?' (Size = 250) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QUESTIONS] ([ANSWERS], [CATEGORY_ID], [DIFFICULTY_ID], [GAMEMASTER_ID], [MEDIA], [QUESTION])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" 
+ [ 22-10-2023 13-37:05 Microsoft.EntityFrameworkCore.Update ] An exception occurred in the database while saving changes for context type '"QuizballApp.Data.QuizballDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_QUESTIONS_GAMEMASTERS\". The conflict occurred in database \"QuizballDB\", table \"dbo.GAMEMASTERS\", column 'ID'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1c5389ff-96a2-42a4-b32c-76b7e2cb5d54
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" 
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_QUESTIONS_GAMEMASTERS". The conflict occurred in database "QuizballDB", table "dbo.GAMEMASTERS", column 'ID'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1c5389ff-96a2-42a4-b32c-76b7e2cb5d54
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[ 22-10-2023 13-37:05 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)" in 313.8194ms 
+ [ 22-10-2023 13-37:05 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-37:05 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_QUESTIONS_GAMEMASTERS". The conflict occurred in database "QuizballDB", table "dbo.GAMEMASTERS", column 'ID'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1c5389ff-96a2-42a4-b32c-76b7e2cb5d54
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at QuizBall.Repositories.UnitOfWork.SaveAsync() in C:\Users\ioana\source\repos\QuizballApp\QuizballApp\Repositories\UnitOfWork.cs:line 28
+   at QuizballApp.Services.QuestionServiceImpl.CreateCustomQuestionAsync(CreateQuestionDTO dto) in C:\Users\ioana\source\repos\QuizballApp\QuizballApp\Services\QuestionServiceImpl.cs:line 52
+   at QuizballApp.Controllers.QuestionsController.PostQuestion(CreateQuestionDTO dto) in C:\Users\ioana\source\repos\QuizballApp\QuizballApp\Controllers\QuestionsController.cs:line 95
+   at lambda_method138(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 22-10-2023 13-37:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 POST https://localhost:7053/api/Questions/ application/json 154 - 500 - text/plain;+charset=utf-8 412.7155ms 
+ [ 22-10-2023 13-37:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 POST https://localhost:7053/api/Questions/ application/json 154 
+ [ 22-10-2023 13-37:58 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-37:58 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[QuizballApp.Data.Question]] PostQuestion(QuizballApp.DTO.CreateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-37:58 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("16"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 250) (DbType = AnsiString), @p5='?' (Size = 250) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QUESTIONS] ([ANSWERS], [CATEGORY_ID], [DIFFICULTY_ID], [GAMEMASTER_ID], [MEDIA], [QUESTION])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" 
+ [ 22-10-2023 13-37:58 Microsoft.EntityFrameworkCore.Update ] An exception occurred in the database while saving changes for context type '"QuizballApp.Data.QuizballDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_QUESTIONS_DIFFICULTY\". The conflict occurred in database \"QuizballDB\", table \"dbo.DIFFICULTY_LEVELS\", column 'ID'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1c5389ff-96a2-42a4-b32c-76b7e2cb5d54
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" 
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_QUESTIONS_DIFFICULTY". The conflict occurred in database "QuizballDB", table "dbo.DIFFICULTY_LEVELS", column 'ID'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1c5389ff-96a2-42a4-b32c-76b7e2cb5d54
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[ 22-10-2023 13-37:58 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)" in 60.1945ms 
+ [ 22-10-2023 13-37:58 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-37:58 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_QUESTIONS_DIFFICULTY". The conflict occurred in database "QuizballDB", table "dbo.DIFFICULTY_LEVELS", column 'ID'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1c5389ff-96a2-42a4-b32c-76b7e2cb5d54
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at QuizBall.Repositories.UnitOfWork.SaveAsync() in C:\Users\ioana\source\repos\QuizballApp\QuizballApp\Repositories\UnitOfWork.cs:line 28
+   at QuizballApp.Services.QuestionServiceImpl.CreateCustomQuestionAsync(CreateQuestionDTO dto) in C:\Users\ioana\source\repos\QuizballApp\QuizballApp\Services\QuestionServiceImpl.cs:line 52
+   at QuizballApp.Controllers.QuestionsController.PostQuestion(CreateQuestionDTO dto) in C:\Users\ioana\source\repos\QuizballApp\QuizballApp\Controllers\QuestionsController.cs:line 95
+   at lambda_method138(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 22-10-2023 13-37:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 POST https://localhost:7053/api/Questions/ application/json 154 - 500 - text/plain;+charset=utf-8 112.7587ms 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 POST https://localhost:7053/api/Questions/ application/json 153 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[QuizballApp.Data.Question]] PostQuestion(QuizballApp.DTO.CreateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-38:12 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 250) (DbType = AnsiString), @p5='?' (Size = 250) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QUESTIONS] ([ANSWERS], [CATEGORY_ID], [DIFFICULTY_ID], [GAMEMASTER_ID], [MEDIA], [QUESTION])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)" in 40.7648ms 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PostQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-38:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 POST https://localhost:7053/api/Questions/ application/json 153 - 200 - application/json;+charset=utf-8 54.6204ms 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/22 application/json 168 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "ObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'. 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 13.451ms 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-39:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/22 application/json 168 - 401 - application/problem+json;+charset=utf-8 27.2085ms 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/24 application/json 168 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-39:57 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("10"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 13-39:57 QuizballApp.Services.GamemasterServiceImpl ] Something went wrong while updating question 24 of gamemaster 24 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"System.String"'. 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 60.8028ms 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-39:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/24 application/json 168 - 400 - text/plain;+charset=utf-8 72.8719ms 
+ [ 22-10-2023 13-45:09 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 22-10-2023 13-46:10 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 13-46:11 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 13-46:11 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 13-46:11 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 13-46:11 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 13-46:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 13-46:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 843.9443ms 
+ [ 22-10-2023 13-46:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 13-46:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 13-46:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 9.7285ms 
+ [ 22-10-2023 13-46:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.6736ms 
+ [ 22-10-2023 13-46:13 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 13-46:13 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.9884ms 
+ [ 22-10-2023 13-46:18 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/24 application/json 169 
+ [ 22-10-2023 13-46:18 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-46:18 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-46:19 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "ObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'. 
+ [ 22-10-2023 13-46:19 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 430.7516ms 
+ [ 22-10-2023 13-46:19 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-46:19 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/24 application/json 169 - 401 - application/problem+json;+charset=utf-8 527.8283ms 
+ [ 22-10-2023 13-47:49 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 13-47:49 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-47:49 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-47:53 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("119"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 13-47:53 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("36"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (Size = 250) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [QUESTIONS] SET [QUESTION] = @p0
+OUTPUT 1
+WHERE [ID] = @p1;" 
+ [ 22-10-2023 13-47:53 QuizballApp.Services.GamemasterServiceImpl ] Something went wrong while updating question 24 of gamemaster 24 
+ [ 22-10-2023 13-47:53 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"System.String"'. 
+ [ 22-10-2023 13-47:53 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 4176.477ms 
+ [ 22-10-2023 13-47:53 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-47:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 400 - text/plain;+charset=utf-8 4202.8910ms 
+ [ 22-10-2023 13-54:06 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 13-54:06 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 13-54:06 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 13-54:06 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 13-54:06 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 13-54:06 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 13-54:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 808.2409ms 
+ [ 22-10-2023 13-54:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 13-54:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 13-54:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 10.0054ms 
+ [ 22-10-2023 13-54:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.4747ms 
+ [ 22-10-2023 13-54:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 13-54:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 144.4590ms 
+ [ 22-10-2023 13-54:39 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 13-54:39 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-54:39 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-54:42 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("139"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 13-54:42 QuizballApp.Services.GamemasterServiceImpl ] Something went wrong while updating question 24 of gamemaster 24 
+ [ 22-10-2023 13-54:42 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"System.String"'. 
+ [ 22-10-2023 13-54:42 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 3241.5051ms 
+ [ 22-10-2023 13-54:42 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-54:42 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 400 - text/plain;+charset=utf-8 3332.7497ms 
+ [ 22-10-2023 13-56:57 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 13-56:57 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 13-56:57 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 13-56:57 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 13-56:57 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 13-56:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 13-56:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 504.8259ms 
+ [ 22-10-2023 13-56:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 13-56:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 13-56:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 10.0404ms 
+ [ 22-10-2023 13-56:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.2066ms 
+ [ 22-10-2023 13-56:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 13-56:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.4488ms 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 490.7676ms 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 13-57:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 400 - application/problem+json;+charset=utf-8 570.5094ms 
+ [ 22-10-2023 13-59:05 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 22-10-2023 14-00:55 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 14-00:55 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 14-00:55 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 14-00:55 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 14-00:55 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 14-00:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 14-00:56 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 655.8280ms 
+ [ 22-10-2023 14-00:56 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 14-00:56 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 14-00:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 35.1117ms 
+ [ 22-10-2023 14-00:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 77.6305ms 
+ [ 22-10-2023 14-00:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 14-00:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.0113ms 
+ [ 22-10-2023 14-01:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 14-01:01 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-01:02 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 14-01:06 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("160"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 14-01:06 QuizballApp.Services.GamemasterServiceImpl ] Something went wrong while updating question 24 of gamemaster 24 
+ [ 22-10-2023 14-01:06 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"System.String"'. 
+ [ 22-10-2023 14-01:06 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 4510.46ms 
+ [ 22-10-2023 14-01:06 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-01:06 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 400 - text/plain;+charset=utf-8 4810.7154ms 
+ [ 22-10-2023 14-01:53 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 22-10-2023 14-07:05 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 14-07:05 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 14-07:05 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 14-07:05 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 14-07:05 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 14-07:06 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 14-07:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 820.1532ms 
+ [ 22-10-2023 14-07:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 14-07:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 14-07:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 8.0728ms 
+ [ 22-10-2023 14-07:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.8191ms 
+ [ 22-10-2023 14-07:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 14-07:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.2419ms 
+ [ 22-10-2023 14-07:12 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 14-07:12 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-07:12 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 14-07:16 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("331"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 14-07:16 QuizballApp.Services.GamemasterServiceImpl ] Something went wrong while updating question 24 of gamemaster 24 
+ [ 22-10-2023 14-07:16 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"System.String"'. 
+ [ 22-10-2023 14-07:16 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 3746.1605ms 
+ [ 22-10-2023 14-07:16 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-07:16 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 400 - text/plain;+charset=utf-8 3867.3693ms 
+ [ 22-10-2023 14-08:18 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 22-10-2023 14-08:27 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 14-08:27 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 14-08:27 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 14-08:27 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 14-08:27 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 14-08:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 14-08:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 377.8757ms 
+ [ 22-10-2023 14-08:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 14-08:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 14-08:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 6.9600ms 
+ [ 22-10-2023 14-08:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.2998ms 
+ [ 22-10-2023 14-08:29 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 14-08:29 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 169.2619ms 
+ [ 22-10-2023 14-08:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 14-08:37 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-08:37 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 14-08:41 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("134"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 14-08:41 QuizballApp.Services.GamemasterServiceImpl ] Something went wrong while updating question 24 of gamemaster 24 
+ [ 22-10-2023 14-08:41 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"System.String"'. 
+ [ 22-10-2023 14-08:41 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 3582.6863ms 
+ [ 22-10-2023 14-08:41 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-08:41 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 400 - text/plain;+charset=utf-8 3693.4940ms 
+ [ 22-10-2023 14-16:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 14-16:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 14-16:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 14-16:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 14-16:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 14-16:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 14-16:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 554.9526ms 
+ [ 22-10-2023 14-16:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 14-16:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 14-16:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 9.6427ms 
+ [ 22-10-2023 14-16:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.3929ms 
+ [ 22-10-2023 14-16:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 14-16:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.9158ms 
+ [ 22-10-2023 14-16:09 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 
+ [ 22-10-2023 14-16:09 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-16:09 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PutQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Int32, QuizballApp.DTO.UpdateQuestionDTO)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 22-10-2023 14-16:13 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("110"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[ID] = @__p_0" 
+ [ 22-10-2023 14-16:13 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionReadOnlyDTO"'. 
+ [ 22-10-2023 14-16:13 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)" in 4195.6668ms 
+ [ 22-10-2023 14-16:13 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.PutQuestion (QuizballApp)"' 
+ [ 22-10-2023 14-16:13 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/1.1 PUT https://localhost:7053/api/Questions/1 application/json 169 - 200 - application/json;+charset=utf-8 4301.3390ms 
+ [ 22-10-2023 14-18:50 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 22-10-2023 14-18:50 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 22-10-2023 14-18:50 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 22-10-2023 14-18:50 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 22-10-2023 14-18:50 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 22-10-2023 14-18:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 22-10-2023 14-18:52 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 1443.1981ms 
+ [ 22-10-2023 14-18:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 22-10-2023 14-18:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 22-10-2023 14-18:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 15.9864ms 
+ [ 22-10-2023 14-18:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.5832ms 
+ [ 22-10-2023 14-18:53 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 22-10-2023 14-18:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 209.7057ms 
+ [ 22-10-2023 14-39:19 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ 

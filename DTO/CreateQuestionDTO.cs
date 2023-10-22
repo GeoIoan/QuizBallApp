@@ -6,7 +6,7 @@ namespace QuizballApp.DTO
     {
         [StringLength(250, ErrorMessage= "The question should not exceed 250 characters"), 
          Required(ErrorMessage= "This field is required")]
-        public string? Question { get; set; }
+        public string? Question1 { get; set; }
         [Url(ErrorMessage = "Please provide a valid url")]
         public string? Media { get; set; }
         public int GamemasterId { get; set; }

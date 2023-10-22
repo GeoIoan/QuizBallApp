@@ -7,7 +7,7 @@ namespace QuizballApp.DTO
     {
         [StringLength(250, ErrorMessage = "The question should not exceed 250 characters"),
          Required(ErrorMessage = "This field is required")]
-        public string? Question { get; set; }
+        public string? Question1 { get; set; }
         [Url(ErrorMessage = "Please provide a valid url")]
         public string? Media { get; set; }
         public int GamemasterId { get; set; }
@@ -25,7 +25,7 @@ namespace QuizballApp.DTO
         {
             return obj is UpdateQuestionDTO dTO &&
                    Id == dTO.Id &&
-                   Question == dTO.Question &&
+                   Question1 == dTO.Question1 &&
                    Media == dTO.Media &&
                    GamemasterId == dTO.GamemasterId &&
                    CategoryId == dTO.CategoryId &&
@@ -35,7 +35,7 @@ namespace QuizballApp.DTO
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Question, Media, GamemasterId, CategoryId, DifficultyId, Answers);
+            return HashCode.Combine(Id, Question1, Media, GamemasterId, CategoryId, DifficultyId, Answers);
         }
     }
 }
