@@ -20,7 +20,6 @@ Quizball is built using the following technology stack:
 
 - ASP.NET Web APIs and asynchronous C#
 - SQL Server database with Entity Framework
-- Service-Oriented Architecture (SOA) design
 - Dependency Injection
 - Serilog for structured logging
 
