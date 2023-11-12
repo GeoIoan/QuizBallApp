@@ -1,4 +1,5 @@
-﻿namespace QuizBall.Repositories
+﻿
+namespace QuizBall.Repositories
 {
     public interface IUnitOfWork
     {

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using QuizballApp.Data;
-using QuizballApp.DTO;
+using QuizballApp.DTO.ParticipantsDTO;
 using QuizballApp.Services;
 
 namespace QuizballApp.Controllers
@@ -27,6 +28,7 @@ namespace QuizballApp.Controllers
         // POST: api/Participants
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> PostParticipant(CreateParticipantDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -60,7 +62,7 @@ namespace QuizballApp.Controllers
 
                 return Ok(participant);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -68,6 +70,7 @@ namespace QuizballApp.Controllers
 
         // DELETE: api/Participants/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteParticipant(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -80,13 +83,14 @@ namespace QuizballApp.Controllers
 
                 return Ok(participant);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
         }
 
         [HttpPut("{id}/{name}", Name = "ChangeParticipantsName")]
+        [Authorize]
         public async Task<IActionResult> ChangeParticipantsName(int id, ChangeParticipantsNameDTO dto)
         {
             if (dto is null || id == 0) return BadRequest("Invalid data");
@@ -107,7 +111,7 @@ namespace QuizballApp.Controllers
 
                 return Ok(participant);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -115,6 +119,7 @@ namespace QuizballApp.Controllers
 
 
         [HttpGet("{id}/{type}", Name = "GetParticipantByType")]
+        [Authorize]
         public async Task<IActionResult> GetParticipantByType(int id, string type)
         {
             if (id == 0 || type.IsNullOrEmpty()) return BadRequest("Invalid data");
@@ -127,7 +132,7 @@ namespace QuizballApp.Controllers
 
                 return Ok(participants);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }

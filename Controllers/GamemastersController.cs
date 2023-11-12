@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using QuizballApp.Authentication;
 using QuizballApp.Data;
-using QuizballApp.DTO;
+using QuizballApp.DTO.GamemasterDTO;
 using QuizballApp.Services;
 
 namespace QuizballApp.Controllers
@@ -19,15 +22,62 @@ namespace QuizballApp.Controllers
     public class GamemastersController : ControllerBase
     {
         private readonly IApplicationService _applicationService;
+        private readonly IAuth auth;
+        private readonly IConfiguration _configuration;
 
-        public GamemastersController(IApplicationService applicationService)
+        public GamemastersController(IApplicationService applicationService, IAuth auth, IConfiguration configuration)
         {
             this._applicationService = applicationService;
+            this.auth = auth;
+            this._configuration = configuration;
         }
 
+        [HttpGet(Name = "Login")]
+        public async Task<IActionResult> Login(LoginDTO dto)
+        {
+            if (dto is null || dto.Username is null || dto.Password is null) return BadRequest("Invalid data");
+
+            var validationErrors = new Dictionary<string, string>();
+
+            if (!TryValidateModel(dto))
+            {
+
+                foreach (var key in ModelState.Keys)
+                {
+                    var modelStateEntry = ModelState[key];
+                    if (modelStateEntry!.Errors.Any())
+                    {
+                        validationErrors[key] = modelStateEntry.Errors.First().ErrorMessage;
+                    }
+                }
+
+                return BadRequest(validationErrors);
+            }
+            try
+            {
+
+                var authDto = await auth.CheckGamemasterAsync(dto);
+
+                if (authDto is null) return Unauthorized();
+
+
+                var userToken = _applicationService.gamemasterService.CreateGamemasterToken(authDto.Id, authDto.GamemasterName!, _configuration["Authentication:SecretKey"]!);
+                authDto.SecurityToken = userToken;
+
+                return Ok(authDto);
+            }
+            catch (DbException)
+            {
+                return StatusCode(500, "Db failure");
+            }
+        }
+
+       
 
         // GET: api/Gamemasters/5
+       
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetGamemaster(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -41,7 +91,7 @@ namespace QuizballApp.Controllers
                 }
                 return Ok(gm);
             }
-            catch(DbException e)
+            catch(DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -50,6 +100,7 @@ namespace QuizballApp.Controllers
         // PUT: api/Gamemasters/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutGamemaster(int id, UpdateGamemasterDTO dto)
         {
             if (id == 0 || dto is null) return BadRequest("Invalid data");
@@ -99,7 +150,7 @@ namespace QuizballApp.Controllers
                 }
 
                 return Ok("Gamemaste with id " + id + " was updated");
-            } catch (DbException e)
+            } catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -154,7 +205,7 @@ namespace QuizballApp.Controllers
 
                 return Ok();
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -162,6 +213,7 @@ namespace QuizballApp.Controllers
 
         // DELETE: api/Gamemasters/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteGamemaster(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -176,7 +228,7 @@ namespace QuizballApp.Controllers
                 }
 
                 return Ok("Gamemaster " + id + " was deleted");
-            }catch(DbException e)
+            }catch(DbException)
             {
                 return StatusCode(500, "Db failure");
             }

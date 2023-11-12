@@ -1,6 +1,11 @@
 ﻿using AutoMapper;
 using QuizballApp.Data;
 using QuizballApp.DTO;
+using QuizballApp.DTO.CategoryDTO;
+using QuizballApp.DTO.GameDTO;
+using QuizballApp.DTO.GamemasterDTO;
+using QuizballApp.DTO.ParticipantsDTO;
+using QuizballApp.DTO.QuestionDTO;
 
 namespace QuizballApp.Configuration
 {
@@ -13,7 +18,6 @@ namespace QuizballApp.Configuration
             CreateMap<UpdateGamemasterDTO, Gamemaster>()
                  .ForSourceMember(x => x.ConfirmedPassword, opt => opt.DoNotValidate());
             CreateMap<CreateParticipantDTO, Participant>();
-            CreateMap<UpdateParticipantDTO, Participant>();
             CreateMap<CreateQuestionDTO, Question>();
             CreateMap<UpdateQuestionDTO, Question>();
             CreateMap<Gamemaster, GamemasterReadOnlyDTO>();

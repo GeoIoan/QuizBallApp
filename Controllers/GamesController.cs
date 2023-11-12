@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
-using QuizballApp.DTO;
+using QuizballApp.DTO.GameDTO;
 using QuizballApp.Services;
 
 namespace QuizballApp.Controllers
@@ -26,6 +27,7 @@ namespace QuizballApp.Controllers
         // POST: api/Games
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> PostGame(CreateGameDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -37,13 +39,14 @@ namespace QuizballApp.Controllers
                 if (game is null) return StatusCode(500, "Something went wrong");
 
                 return Ok(game);
-            }catch (DbException e)
+            }catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
         }
 
         [HttpPut]
+        [Authorize]
         public async Task<IActionResult> UpdateGame(GamesEndDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -53,13 +56,14 @@ namespace QuizballApp.Controllers
                 if (game is null) return StatusCode(500, "Something went wrong");
                 return Ok(game);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
         }
 
         [HttpGet(Name = "GetGamesByParticipants")]
+        [Authorize]
         public async Task<IActionResult> GetGamesByPaarticipants(GetGameByParticipantsDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -71,7 +75,7 @@ namespace QuizballApp.Controllers
                 if (games is null) return StatusCode(500, "Something went wrong");
                 return Ok(games);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }

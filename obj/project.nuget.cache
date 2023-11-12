@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rDktrPccNlbMfZzEPkFcJlc0NDSYot+wKMyFD5TU+OWsfYMonqpikcQkRwWsYQlZFfTMNct298j9p6lneL3Tbw==",
+  "dgSpecHash": "NH1T6QI2KDKvA+BWNADcheBo3Ie+YITLiod23SEQMLfO2bziKHd9na3ORf5zRhbXgzhS0Gv6vaxMMtL8lf4ENw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ioana\\source\\repos\\QuizballApp\\QuizballApp\\QuizballApp.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\ioana\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\ioana\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\ioana\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\ioana\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",
     "C:\\Users\\ioana\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\ioana\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\ioana\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

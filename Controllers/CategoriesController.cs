@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,7 @@ namespace QuizballApp.Controllers
 
         // GET: api/Categories
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetCategories()
         {
             try
@@ -32,7 +34,7 @@ namespace QuizballApp.Controllers
                 var categories = await _applicationService.categoryService.GetAllCatAsync();
                 if (categories.IsNullOrEmpty()) return StatusCode(500, "Something went wrong");
                 return Ok(categories);
-            }catch(DbException e)
+            }catch(DbException)
             {
                 return StatusCode(500, "Db failure");
             }

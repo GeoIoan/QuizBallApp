@@ -1,4 +1,6 @@
-﻿namespace QuizballApp.Services
+﻿
+
+namespace QuizballApp.Services
 {
     public interface IApplicationService
     {

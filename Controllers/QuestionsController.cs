@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualBasic;
 using QuizballApp.Data;
 using QuizballApp.DTO;
+using QuizballApp.DTO.QuestionDTO;
 using QuizballApp.Services;
 
 namespace QuizballApp.Controllers
@@ -26,9 +28,12 @@ namespace QuizballApp.Controllers
             this._applicationService = applicationService;
         }
 
+       
+
         // PUT: api/Questions/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutQuestion(int id, UpdateQuestionDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -60,7 +65,7 @@ namespace QuizballApp.Controllers
 
                 return Ok(question);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -69,6 +74,7 @@ namespace QuizballApp.Controllers
         // POST: api/Questions
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> PostQuestion(CreateQuestionDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -98,7 +104,7 @@ namespace QuizballApp.Controllers
 
                 return Ok(question);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -106,6 +112,7 @@ namespace QuizballApp.Controllers
 
         // DELETE: api/Questions/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteQuestion(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -120,13 +127,14 @@ namespace QuizballApp.Controllers
 
                 return Ok(question);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
         }
 
         [HttpGet("{id}", Name = "GetCustomQuestions")]
+        [Authorize]
         public async Task<IActionResult> GetCustomQuestions(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -140,7 +148,7 @@ namespace QuizballApp.Controllers
                 }
                 return Ok(questions);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
@@ -148,6 +156,7 @@ namespace QuizballApp.Controllers
         }
 
         [HttpGet(Name = "GetRandomQuestion")]
+        [Authorize]
         public async Task<IActionResult> GetRandomQuestion(SelectQuestionDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");
@@ -162,13 +171,14 @@ namespace QuizballApp.Controllers
                 }
                 return Ok(question);
             }
-            catch (DbException e)
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }
         }
 
         [HttpPost("{id}", Name = "ConnectQuestionWithGame")]
+        [Authorize]
         public async Task<IActionResult> AddGameToQuestion(int id, InsertGameToQuestionDTO dto)
         {
             if (id == 0 || dto is null) return BadRequest("Invalid data");
@@ -178,13 +188,14 @@ namespace QuizballApp.Controllers
                 if (!added) return StatusCode(500, "Something went wrong");
                 return Ok();
             }
-            catch(DbException e)
+            catch(DbException)
             {
                 return StatusCode(500, "Db failure");
             }
         }
 
         [HttpGet("{gId}/{cId}", Name = "GetCustomQuestionsByCategory")]
+        [Authorize]
         public async Task<IActionResult> GetCustomQuestionsByCategory(int gId, int cId)
         {
             if (gId == 0 || cId == 0) return BadRequest("Invalid data");
@@ -198,7 +209,7 @@ namespace QuizballApp.Controllers
 
                 return Ok(questions);
             }
-            catch(DbException e)
+            catch(DbException)
             {
                 return StatusCode(500, "Db failure");
             }

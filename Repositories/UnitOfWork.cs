@@ -1,8 +1,7 @@
 ﻿
-
 using QuizballApp.Data;
 
-namespace QuizBall.Repositories 
+namespace QuizBall.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
