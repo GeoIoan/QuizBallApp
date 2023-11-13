@@ -61,3 +61,5 @@ In the near future, Quizball's frontend will be enhanced using the Angular frame
 With this comprehensive technology stack and architectural approach, Quizball promises an engaging and customizable quiz gaming experience, further elevated by a future-enhanced frontend developed using the Angular framework.
 
 Thank you for exploring Quizball!
+
+*Doc comments will be added soon!
