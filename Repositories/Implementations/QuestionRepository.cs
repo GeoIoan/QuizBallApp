@@ -16,7 +16,7 @@ namespace QuizBall.Repositories
             return customQuestions;
         }
 
-        public async Task<Question> GetRandomQuestionAsync(int gamemasterId, int categoryId, int difficultyId)
+        public async Task<Question> GetRandomQuestionAsync(int? gamemasterId, int categoryId, int difficultyId)
         {
             var filteredQuestionsTask = await _context.Questions.Where(q => (q.GamemasterId == gamemasterId) 
                                                             && (q.CategoryId == categoryId)

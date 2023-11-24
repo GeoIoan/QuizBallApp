@@ -32,7 +32,7 @@ namespace QuizballApp.Controllers
             this._configuration = configuration;
         }
 
-        [HttpGet(Name = "Login")]
+        [HttpPost(Name = "Login")]
         public async Task<IActionResult> Login(LoginDTO dto)
         {
             if (dto is null || dto.Username is null || dto.Password is null) return BadRequest("Invalid data");

@@ -60,6 +60,7 @@ namespace QuizballApp
                     };
                 });
 
+
             builder.Services.AddCors(options => options.AddPolicy("AllowAll", policy =>
             {
                 policy.AllowAnyMethod()
@@ -89,6 +90,8 @@ namespace QuizballApp
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("AllowAll");
 
             app.UseAuthentication();
 

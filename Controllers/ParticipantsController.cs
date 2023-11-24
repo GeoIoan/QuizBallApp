@@ -28,9 +28,11 @@ namespace QuizballApp.Controllers
         // POST: api/Participants
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        [Authorize]
+       /* [Authorize]*/
         public async Task<IActionResult> PostParticipant(CreateParticipantDTO dto)
         {
+            await Console.Out.WriteLineAsync("" + dto);
+
             if (dto is null) return BadRequest("Invalid data");
 
             try
@@ -119,7 +121,7 @@ namespace QuizballApp.Controllers
 
 
         [HttpGet("{id}/{type}", Name = "GetParticipantByType")]
-        [Authorize]
+        /*[Authorize]*/
         public async Task<IActionResult> GetParticipantByType(int id, string type)
         {
             if (id == 0 || type.IsNullOrEmpty()) return BadRequest("Invalid data");

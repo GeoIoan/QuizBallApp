@@ -156,9 +156,18 @@ namespace QuizballApp.Controllers
         }
 
         [HttpGet(Name = "GetRandomQuestion")]
-        [Authorize]
-        public async Task<IActionResult> GetRandomQuestion(SelectQuestionDTO dto)
+   
+        public async Task<IActionResult> GetRandomQuestion(int gamemasterId, int categoryId, int difficultyId)
         {
+            var dto = new SelectQuestionDTO()
+            {
+                Gamemaster_id = gamemasterId,
+                Category_id = categoryId,
+                Difficulty_id = difficultyId
+            };
+
+            await Console.Out.WriteLineAsync("SelectQuestionDto: " + dto);
+
             if (dto is null) return BadRequest("Invalid data");
 
             try
