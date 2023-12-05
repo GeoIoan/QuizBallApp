@@ -15,6 +15,8 @@ namespace QuizBall.Repositories
 
         public async Task<Participant?> ChangeParticipantsName(int participantId, string newName)
         {
+
+            await Console.Out.WriteLineAsync("We are in the participants repo");
             var participant = await _context.Participants.Where(p => p.Id == participantId).FirstAsync();
             if (participant is null) return null;
 
@@ -22,12 +24,18 @@ namespace QuizBall.Repositories
 
             _context.Participants.Update(participant);
 
+            await Console.Out.WriteLineAsync("Participant: " + participant);
+
             return participant;
         }
 
         public async Task<bool> CheckParticipantsName(int gamemasterid, string participantsName)
         {
-            var participant = await _context.Participants.Where(p => (p.GamemasterId == gamemasterid) && (p.Name == participantsName)).FirstAsync();
+            await Console.Out.WriteLineAsync("We are in check participant name repo method");
+            var participant = await _context.Participants.Where(p => (p.GamemasterId == gamemasterid) && (p.Name == participantsName)).FirstOrDefaultAsync();
+
+            
+
             if (participant is null) return true;
             else return false;
         }

@@ -26,19 +26,28 @@ namespace QuizBall.Repositories
             return games;
         }
 
-        public async Task<bool> AddQuestionToGame(int gameId, Question question)
+        public async Task<bool> AddQuestionsToGame(int gameId, List<Question> questions)
         {
+            bool isQuestionIn = true;
 
             var game = await _context.Games
                 .Include(g => g.Questions)
                 .FirstOrDefaultAsync(g => g.Id == gameId);
 
-            game!.Questions.Add(question);
 
-
+            questions.ForEach(q =>
+            {
+                game!.Questions.Add(q);
+            });
+           
             await _context.SaveChangesAsync();
 
-            return game!.Questions.Contains(question);
+            questions.ForEach(q =>
+            {
+                if (!game!.Questions.Contains(q)) isQuestionIn =  false;
+            });
+
+            return isQuestionIn;
         }
 
         public async Task<Game?> GamesEndUpdate(GamesEndDTO dto)

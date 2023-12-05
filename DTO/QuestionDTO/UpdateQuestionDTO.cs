@@ -21,6 +21,10 @@ namespace QuizballApp.DTO
         Required(ErrorMessage = "This field is required")]
         public string? Answers { get; set; }
 
+        [StringLength(250, ErrorMessage = "Fifty fifty should not exceed 150 characters"),
+        Required(ErrorMessage = "This field is required")]
+        public string? FiftyFifty { get; set; }
+
         public override bool Equals(object? obj)
         {
             return obj is UpdateQuestionDTO dTO &&

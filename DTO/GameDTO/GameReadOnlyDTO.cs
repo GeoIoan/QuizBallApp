@@ -14,7 +14,7 @@ namespace QuizballApp.DTO.GameDTO
 
         public DateTime? EndDate { get; set; }
 
-        public TimeSpan? Duration { get; set; }
+        public DateTime? Duration { get; set; }
 
         public int GamemasterId { get; set; }
 

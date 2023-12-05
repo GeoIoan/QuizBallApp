@@ -197,7 +197,8 @@ namespace QuizballApp.Services
                        question.GamemasterId == dto.GamemasterId &&
                        question.DifficultyId == dto.DifficultyId &&
                        question.Question1 == dto.Question1 &&
-                       question.Answers == dto.Answers;         
+                       question.Answers == dto.Answers &&
+                       question.FiftyFifty == dto.FiftyFifty;
             }
     }
 }

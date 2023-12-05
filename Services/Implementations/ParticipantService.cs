@@ -27,8 +27,11 @@ namespace QuizballApp.Services
         {
             try
             {
+                await Console.Out.WriteLineAsync("We came to participant service");
                 var participant = await _unitOfWork.ParticipantRepository.ChangeParticipantsName(participantId, name);
-                await _unitOfWork.SaveAsync();                
+                await _unitOfWork.SaveAsync();
+
+                await Console.Out.WriteLineAsync("We send our request to the participant repo");
                 if (participant == null || participant.Name != name)
                 {
                     _logger.Error("Something went wrong while updating participants " + participantId + " name");
@@ -46,7 +49,12 @@ namespace QuizballApp.Services
         {
             try
             {
+                await Console.Out.WriteLineAsync("We are in check participant service method");
                 var isNameAvailable = await _unitOfWork.ParticipantRepository.CheckParticipantsName(gamemasterId, name);
+                
+                await _unitOfWork.SaveAsync();
+                await Console.Out.WriteLineAsync("We are in check participant service method2");
+                await Console.Out.WriteLineAsync("Is name available: "+ isNameAvailable);
                 return isNameAvailable;
             }
             catch (DbException)

@@ -23,6 +23,8 @@ public partial class Question
 
     public string? Answers { get; set; }
 
+    public string? FiftyFifty { get; set; }
+
     public virtual Category? Category { get; set; }
 
     public virtual DifficultyLevel? Difficulty { get; set; }

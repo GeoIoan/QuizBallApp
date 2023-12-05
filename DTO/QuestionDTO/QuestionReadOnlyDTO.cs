@@ -18,6 +18,8 @@ namespace QuizballApp.DTO.QuestionDTO
 
         public string? Answers { get; set; }
 
+        public string? FiftyFifty { get; set; }
+
         public override bool Equals(object? obj)
         {
             return obj is QuestionReadOnlyDTO dTO &&

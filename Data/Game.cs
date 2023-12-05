@@ -17,7 +17,7 @@ public partial class Game
 
     public DateTime? EndDate { get; set; }
 
-    public TimeSpan? Duration { get; set; }
+    public DateTime? Duration { get; set; }
 
     public int GamemasterId { get; set; }
 

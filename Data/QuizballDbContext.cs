@@ -83,7 +83,9 @@ public partial class QuizballDbContext : DbContext
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Custom).HasColumnName("CUSTOM");
-            entity.Property(e => e.Duration).HasColumnName("DURATION");
+            entity.Property(e => e.Duration)
+            .HasColumnType("datetime")
+            .HasColumnName("DURATION");
             entity.Property(e => e.EndDate)
                 .HasColumnType("datetime")
                 .HasColumnName("END_DATE");
@@ -198,6 +200,10 @@ public partial class QuizballDbContext : DbContext
                 .HasMaxLength(250)
                 .IsUnicode(false)
                 .HasColumnName("QUESTION");
+            entity.Property(e => e.FiftyFifty)
+                .HasMaxLength(150)
+                .IsUnicode(false)
+                .HasColumnName("FIFTY_FIFTY");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Questions)
                 .HasForeignKey(d => d.CategoryId)

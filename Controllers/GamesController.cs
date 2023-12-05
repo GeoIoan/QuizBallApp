@@ -26,10 +26,11 @@ namespace QuizballApp.Controllers
 
         // POST: api/Games
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        [Authorize]
+        [HttpPost("CreateGame")]
+        /* [Authorize]*/
         public async Task<IActionResult> PostGame(CreateGameDTO dto)
         {
+            await Console.Out.WriteLineAsync("We are here");
             if (dto is null) return BadRequest("Invalid data");
 
             try
@@ -40,6 +41,24 @@ namespace QuizballApp.Controllers
 
                 return Ok(game);
             }catch (DbException)
+            {
+                return StatusCode(500, "Db failure");
+            }
+        }
+
+        [HttpPost("AddQuestionsToGame")]
+        public async Task<IActionResult> AddQuestions(AddQuestionsDTO dto)
+        {
+            if (dto is null) return BadRequest("Invalid data");
+            try
+            {
+                var areQuestionsAdded = await _applicationService.gameService.AddQuestionsAsync(dto.GameId, dto.Questions);
+
+                if (!areQuestionsAdded) return StatusCode(500, "Something went wrong");
+
+                return Ok();
+            }
+            catch (DbException)
             {
                 return StatusCode(500, "Db failure");
             }

@@ -8,6 +8,6 @@ namespace QuizballApp.Services
         Task<GameReadOnlyDTO> CreateGameAsync(CreateGameDTO dto);
         Task<GameReadOnlyDTO> UpdateGameAsync(GamesEndDTO dto);
         Task<IList<GameReadOnlyDTO>> GetGameByParticipantsAsync(GetGameByParticipantsDTO dto);
-        Task<bool> AddQuestionAsync(int gameId, Question question);
+        Task<bool> AddQuestionsAsync(int gameId, List<Question> questions);
     }
 }

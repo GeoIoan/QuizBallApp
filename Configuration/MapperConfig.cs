@@ -25,6 +25,7 @@ namespace QuizballApp.Configuration
             CreateMap<Question, QuestionReadOnlyDTO>();
             CreateMap<InsertGameToQuestionDTO, Game>();
             CreateMap<Game, GameReadOnlyDTO>();
+            CreateMap<CreateGameDTO,Game> ();
             CreateMap<Category, CategoryReadOnlyDTO>();
         }
     }

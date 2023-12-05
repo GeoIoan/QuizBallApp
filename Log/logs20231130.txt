@@ -1,0 +1,738 @@
+[ 30-11-2023 00-26:53 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 02-40:33 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 02-40:36 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 02-40:36 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 02-40:36 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 02-40:36 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 02-40:36 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 03-16:23 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/team - - 
+ [ 30-11-2023 03-16:24 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-16:24 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-16:24 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 03-16:28 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("173"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 03-16:28 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 03-16:28 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 3638.667ms 
+ [ 30-11-2023 03-16:28 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-16:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/team - - - 200 - application/json;+charset=utf-8 4701.2117ms 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/questions?gamemasterId=1&categoryId=1&difficultyId=2 - - 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(Int32, Int32, Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 30-11-2023 03-16:40 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("19"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionDTO.QuestionReadOnlyDTO"'. 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 126.789ms 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 30-11-2023 03-16:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/questions?gamemasterId=1&categoryId=1&difficultyId=2 - - - 200 - application/json;+charset=utf-8 148.4450ms 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/questions?gamemasterId=1&categoryId=5&difficultyId=2 - - 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(Int32, Int32, Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 30-11-2023 03-17:02 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("7"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionDTO.QuestionReadOnlyDTO"'. 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 33.4796ms 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 30-11-2023 03-17:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/questions?gamemasterId=1&categoryId=5&difficultyId=2 - - - 200 - application/json;+charset=utf-8 148.7135ms 
+ [ 30-11-2023 03-18:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/questions?gamemasterId=1&categoryId=5&difficultyId=2 - - 
+ [ 30-11-2023 03-18:27 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-18:28 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 30-11-2023 03-18:28 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetRandomQuestion\", controller = \"Questions\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRandomQuestion(Int32, Int32, Int32)" on controller "QuizballApp.Controllers.QuestionsController" ("QuizballApp"). 
+ [ 30-11-2023 03-18:31 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("46"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__categoryId_1='?' (DbType = Int32), @__difficultyId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[ID], [q].[ANSWERS], [q].[CATEGORY_ID], [q].[DIFFICULTY_ID], [q].[GAMEMASTER_ID], [q].[MEDIA], [q].[QUESTION]
+FROM [QUESTIONS] AS [q]
+WHERE [q].[GAMEMASTER_ID] = @__gamemasterId_0 AND [q].[CATEGORY_ID] = @__categoryId_1 AND [q].[DIFFICULTY_ID] = @__difficultyId_2" 
+ [ 30-11-2023 03-18:31 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizballApp.DTO.QuestionDTO.QuestionReadOnlyDTO"'. 
+ [ 30-11-2023 03-18:31 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)" in 2557.6478ms 
+ [ 30-11-2023 03-18:31 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.QuestionsController.GetRandomQuestion (QuizballApp)"' 
+ [ 30-11-2023 03-18:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/questions?gamemasterId=1&categoryId=5&difficultyId=2 - - - 200 - application/json;+charset=utf-8 5131.5749ms 
+ [ 30-11-2023 03-19:56 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger - - 
+ [ 30-11-2023 03-19:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger - - - 0 - - 1190.3185ms 
+ [ 30-11-2023 03-19:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 03-20:04 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 6212.1576ms 
+ [ 30-11-2023 03-20:14 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 30-11-2023 03-20:14 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/swagger-ui.css - - 
+ [ 30-11-2023 03-20:14 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 496.5628ms 
+ [ 30-11-2023 03-20:19 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' 
+ [ 30-11-2023 03-20:19 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/swagger-ui.css - - - 0 144929 text/css 4838.4688ms 
+ [ 30-11-2023 03-20:20 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - 
+ [ 30-11-2023 03-20:20 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' 
+ [ 30-11-2023 03-20:20 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - - 0 628 image/png 188.3226ms 
+ [ 30-11-2023 03-20:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 30-11-2023 03-20:53 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Gamemasters" for actions - QuizballApp.Controllers.GamemastersController.Login (QuizballApp),QuizballApp.Controllers.GamemastersController.PostGamemaster (QuizballApp). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-20:58 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 27271.6351ms 
+ [ 30-11-2023 03-26:36 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/team - - 
+ [ 30-11-2023 03-26:38 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-26:38 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-26:38 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 03-26:39 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("283"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 03-26:40 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 03-26:40 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 1853.1191ms 
+ [ 30-11-2023 03-26:40 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-26:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/team - - - 200 - application/json;+charset=utf-8 3783.7546ms 
+ [ 30-11-2023 03-31:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 03-31:51 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-31:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 1024.2068ms 
+ [ 30-11-2023 03-31:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 320 
+ [ 30-11-2023 03-31:51 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+QuizballApp.Controllers.GamesController.AddQuestions (QuizballApp)
+QuizballApp.Controllers.GamesController.PostGame (QuizballApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-31:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 320 - 500 - text/plain;+charset=utf-8 184.6107ms 
+ [ 30-11-2023 03-33:25 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 03-34:51 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 03-34:52 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 03-34:52 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 03-34:52 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 03-34:52 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 03-34:52 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 03-35:01 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 03-35:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 598.8761ms 
+ [ 30-11-2023 03-35:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 30-11-2023 03-35:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 7.7093ms 
+ [ 30-11-2023 03-35:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 30-11-2023 03-35:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 170.9006ms 
+ [ 30-11-2023 03-35:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 30-11-2023 03-35:11 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Gamemasters" for actions - QuizballApp.Controllers.GamemastersController.Login (QuizballApp),QuizballApp.Controllers.GamemastersController.PostGamemaster (QuizballApp). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-35:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 107.1435ms 
+ [ 30-11-2023 03-36:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 03-36:07 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-36:07 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-36:07 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 03-36:10 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("132"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 03-36:10 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 03-36:10 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 3414.8741ms 
+ [ 30-11-2023 03-36:10 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-36:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 3721.8178ms 
+ [ 30-11-2023 03-36:16 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 03-36:16 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-36:16 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 7.1501ms 
+ [ 30-11-2023 03-36:16 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 320 
+ [ 30-11-2023 03-36:16 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+QuizballApp.Controllers.GamesController.AddQuestions (QuizballApp)
+QuizballApp.Controllers.GamesController.PostGame (QuizballApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-36:16 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 320 - 500 - text/plain;+charset=utf-8 30.4780ms 
+ [ 30-11-2023 03-37:36 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 03-37:45 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 03-37:46 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 03-37:46 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 03-37:46 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 03-37:46 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 03-37:46 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 03-37:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 03-37:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 450.2612ms 
+ [ 30-11-2023 03-37:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 30-11-2023 03-37:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 30-11-2023 03-37:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 6.3344ms 
+ [ 30-11-2023 03-37:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.6067ms 
+ [ 30-11-2023 03-37:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 30-11-2023 03-37:55 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Gamemasters" for actions - QuizballApp.Controllers.GamemastersController.Login (QuizballApp),QuizballApp.Controllers.GamemastersController.PostGamemaster (QuizballApp). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-37:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 110.3651ms 
+ [ 30-11-2023 03-40:56 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/team - - 
+ [ 30-11-2023 03-40:56 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-40:56 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-40:57 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 03-41:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("143"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 03-41:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 03-41:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 3352.0248ms 
+ [ 30-11-2023 03-41:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-41:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/team - - - 200 - application/json;+charset=utf-8 3674.1820ms 
+ [ 30-11-2023 03-41:18 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 03-41:18 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-41:18 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 7.8509ms 
+ [ 30-11-2023 03-41:18 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 320 
+ [ 30-11-2023 03-41:18 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+QuizballApp.Controllers.GamesController.AddQuestions (QuizballApp)
+QuizballApp.Controllers.GamesController.PostGame (QuizballApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-41:18 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 320 - 500 - text/plain;+charset=utf-8 45.7568ms 
+ [ 30-11-2023 03-41:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games/CreateGame - - 
+ [ 30-11-2023 03-41:31 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-41:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games/CreateGame - - - 204 - - 5.6148ms 
+ [ 30-11-2023 03-41:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games/CreateGame application/json 320 
+ [ 30-11-2023 03-41:31 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-41:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games/CreateGame application/json 320 - 404 0 - 6.5935ms 
+ [ 30-11-2023 03-44:07 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 03-44:17 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 03-44:17 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 03-44:17 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 03-44:17 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 03-44:17 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 03-44:17 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 03-44:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 03-44:30 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 3653.4727ms 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/swagger-ui.css - - 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 39.6876ms 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/swagger-ui.css - - - 0 144929 text/css 118.4928ms 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 93.2240ms 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - - 0 628 image/png 9.7121ms 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 30-11-2023 03-44:31 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Gamemasters" for actions - QuizballApp.Controllers.GamemastersController.Login (QuizballApp),QuizballApp.Controllers.GamemastersController.PostGamemaster (QuizballApp). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-44:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 291.3233ms 
+ [ 30-11-2023 03-44:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 03-44:54 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-44:54 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-44:54 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 03-44:57 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("174"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 03-44:57 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 03-44:57 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 3016.0754ms 
+ [ 30-11-2023 03-44:57 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 03-44:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 3168.4077ms 
+ [ 30-11-2023 03-45:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games/CreateGame - - 
+ [ 30-11-2023 03-45:02 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-45:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games/CreateGame - - - 204 - - 15.6647ms 
+ [ 30-11-2023 03-45:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games/CreateGame application/json 320 
+ [ 30-11-2023 03-45:02 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-45:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games/CreateGame application/json 320 - 404 0 - 6.4257ms 
+ [ 30-11-2023 03-50:36 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games/CreateGame - - 
+ [ 30-11-2023 03-50:36 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-50:36 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games/CreateGame - - - 204 - - 699.3142ms 
+ [ 30-11-2023 03-50:36 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games/CreateGame application/json 320 
+ [ 30-11-2023 03-50:36 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-50:36 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games/CreateGame application/json 320 - 404 0 - 31.4953ms 
+ [ 30-11-2023 03-51:46 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 03-51:46 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 03-51:46 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 03-51:46 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 03-51:46 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 03-51:46 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 145.4932ms 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 320 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 03-53:08 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 03-53:09 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 690.8952ms 
+ [ 30-11-2023 03-53:09 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 03-53:09 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 03-53:09 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 320 - 500 - text/plain;+charset=utf-8 965.1608ms 
+ [ 30-11-2023 03-56:07 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games text/plain 320 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "ObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'. 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 196.3093ms 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 03-56:08 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games text/plain 320 - 415 - application/problem+json;+charset=utf-8 1172.4189ms 
+ [ 30-11-2023 04-00:02 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 320 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 720.7353ms 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 82.7387ms 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 04-00:03 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 04-00:04 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 320 - 500 - text/plain;+charset=utf-8 1213.4550ms 
+ [ 30-11-2023 04-05:58 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 12-51:46 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 12-51:47 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 12-51:47 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 12-51:47 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 12-51:47 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 12-51:47 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 12-52:10 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger - - 
+ [ 30-11-2023 12-52:11 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger - - - 0 - - 1866.1480ms 
+ [ 30-11-2023 12-54:18 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 12-54:18 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 12-54:18 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 12-54:18 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 12-54:18 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 12-54:18 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 12-54:23 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger - - 
+ [ 30-11-2023 12-54:23 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 12-54:23 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger - - - 0 - - 310.0712ms 
+ [ 30-11-2023 12-54:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 3198.5716ms 
+ [ 30-11-2023 12-54:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 30-11-2023 12-54:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 193.6673ms 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - - 0 628 image/png 67.2902ms 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 597.3596ms 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 30-11-2023 12-54:27 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Gamemasters" for actions - QuizballApp.Controllers.GamemastersController.Login (QuizballApp),QuizballApp.Controllers.GamemastersController.PostGamemaster (QuizballApp). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 12-54:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 937.3237ms 
+ [ 30-11-2023 12-54:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 12-54:37 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-54:37 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 12-54:37 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 12-54:40 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("174"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 12-54:41 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 12-54:41 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 3645.3177ms 
+ [ 30-11-2023 12-54:41 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 12-54:41 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 3782.7423ms 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 11.0582ms 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 47.9261ms 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 12-54:48 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 12-54:48 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 500 - text/plain;+charset=utf-8 99.8906ms 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 68.7751ms 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 50.6856ms 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 12-56:59 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 12-56:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 500 - text/plain;+charset=utf-8 472.8829ms 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 12-58:26 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("85"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 643.0419ms 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 12-58:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 895.0399ms 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 27.6792ms 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 1.3467ms 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 12-58:31 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 12-58:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 500 - text/plain;+charset=utf-8 126.2990ms 
+ [ 30-11-2023 13-00:34 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 13-00:35 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("104"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 245.4386ms 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-00:35 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 446.5937ms 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 5.4347ms 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 17.6405ms 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-00:40 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 13-00:40 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 500 - text/plain;+charset=utf-8 146.0244ms 
+ [ 30-11-2023 13-06:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-06:26 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-06:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 570.3455ms 
+ [ 30-11-2023 13-06:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-06:27 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-06:27 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-06:27 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-06:28 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 556.6873ms 
+ [ 30-11-2023 13-06:28 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-06:28 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware ] An unhandled exception has occurred while executing the request. 
+ System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface types is not supported. Type 'QuizballApp.DTO.GameDTO.CreateGameDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, NotSupportedException ex)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(Type type, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](Utf8JsonReader& reader, JsonTypeInfo jsonTypeInfo, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ContinueDeserialize[TValue](ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[ 30-11-2023 13-06:29 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 500 - text/plain;+charset=utf-8 2308.8854ms 
+ [ 30-11-2023 13-14:18 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 13-15:16 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 13-15:17 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 13-15:17 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 13-15:17 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 13-15:17 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 13-15:17 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 13-15:22 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger - - 
+ [ 30-11-2023 13-15:22 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 13-15:23 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger - - - 0 - - 964.5464ms 
+ [ 30-11-2023 13-15:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 2071.5539ms 
+ [ 30-11-2023 13-15:54 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 13-15:54 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-15:54 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-15:54 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 13-15:57 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("172"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 13-15:57 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 13-15:57 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 2828.6077ms 
+ [ 30-11-2023 13-15:57 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-15:57 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 2959.2513ms 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 6.4359ms 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-16:24 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-16:25 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 30-11-2023 13-16:25 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 103.8344ms 
+ [ 30-11-2023 13-16:25 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-16:25 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 400 - application/problem+json;+charset=utf-8 129.7599ms 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 82.4844ms 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 113.1534ms 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-22:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 400 - application/problem+json;+charset=utf-8 276.4060ms 
+ [ 30-11-2023 13-35:44 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-35:45 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-35:45 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 1415.0610ms 
+ [ 30-11-2023 13-35:45 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-35:45 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-35:46 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-35:46 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-35:47 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 30-11-2023 13-35:47 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 1085.6642ms 
+ [ 30-11-2023 13-35:47 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-35:47 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 400 - application/problem+json;+charset=utf-8 1832.2439ms 
+ [ 30-11-2023 13-40:50 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/team - - 
+ [ 30-11-2023 13-40:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-40:50 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-40:50 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 13-40:51 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("90"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 13-40:51 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 13-40:51 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 623.7855ms 
+ [ 30-11-2023 13-40:51 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-40:51 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/team - - - 200 - application/json;+charset=utf-8 651.5838ms 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 5.6550ms 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 12.7079ms 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-40:55 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 400 - application/problem+json;+charset=utf-8 41.2475ms 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/api/participants/1/player - - 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetParticipantByType\", controller = \"Participants\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetParticipantByType(Int32, System.String)" on controller "QuizballApp.Controllers.ParticipantsController" ("QuizballApp"). 
+ [ 30-11-2023 13-43:31 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("121"ms) [Parameters=["@__gamemasterId_0='?' (DbType = Int32), @__participantType_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[GAMEMASTER_ID], [p].[MEMBERS], [p].[NAME], [p].[TYPE], [p].[WINS]
+FROM [PARTICIPANTS] AS [p]
+WHERE [p].[GAMEMASTER_ID] = @__gamemasterId_0 AND [p].[TYPE] = @__participantType_1" 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizballApp.DTO.ParticipantsDTO.ParticipantReadOnlyDTO, QuizballApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)" in 353.8039ms 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.ParticipantsController.GetParticipantByType (QuizballApp)"' 
+ [ 30-11-2023 13-43:31 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/api/participants/1/player - - - 200 - application/json;+charset=utf-8 431.5336ms 
+ [ 30-11-2023 13-43:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 OPTIONS https://localhost:7053/api/games - - 
+ [ 30-11-2023 13-43:37 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-43:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 OPTIONS https://localhost:7053/api/games - - - 204 - - 5.8956ms 
+ [ 30-11-2023 13-43:37 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 POST https://localhost:7053/api/games application/json 190 
+ [ 30-11-2023 13-43:37 Microsoft.AspNetCore.Cors.Infrastructure.CorsService ] CORS policy execution successful. 
+ [ 30-11-2023 13-43:38 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-43:38 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"PostGame\", controller = \"Games\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostGame(QuizballApp.DTO.GameDTO.CreateGameDTO)" on controller "QuizballApp.Controllers.GamesController" ("QuizballApp"). 
+ [ 30-11-2023 13-43:38 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [ 30-11-2023 13-43:38 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizballApp.Controllers.GamesController.PostGame (QuizballApp)" in 20.8416ms 
+ [ 30-11-2023 13-43:38 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizballApp.Controllers.GamesController.PostGame (QuizballApp)"' 
+ [ 30-11-2023 13-43:38 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 POST https://localhost:7053/api/games application/json 190 - 400 - application/problem+json;+charset=utf-8 55.6584ms 
+ [ 30-11-2023 14-01:28 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ [ 30-11-2023 14-43:31 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 30-11-2023 14-43:32 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 30-11-2023 14-43:32 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 30-11-2023 14-43:32 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 30-11-2023 14-43:32 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 30-11-2023 14-43:32 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 30-11-2023 14-43:39 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 30-11-2023 14-43:41 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 2164.9310ms 
+ [ 30-11-2023 14-43:54 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ 

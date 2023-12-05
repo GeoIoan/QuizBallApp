@@ -32,7 +32,7 @@ namespace QuizballApp.Controllers
             this._configuration = configuration;
         }
 
-        [HttpPost(Name = "Login")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO dto)
         {
             if (dto is null || dto.Username is null || dto.Password is null) return BadRequest("Invalid data");
@@ -110,37 +110,29 @@ namespace QuizballApp.Controllers
 
                 var validationErrors = new Dictionary<string, string>();
 
-                if (!TryValidateModel(dto))
-                {
-               
-                    foreach(var key in ModelState.Keys)
-                    {
-                        var modelStateEntry = ModelState[key];
-                        if (modelStateEntry!.Errors.Any())
-                        {
-                            validationErrors[key] = modelStateEntry.Errors.First().ErrorMessage;
-                        }                 
-                    }
-                   
-                    return BadRequest(validationErrors);
-                }
+              
 
-             
+
                 var isUsernameAvailable = await _applicationService.gamemasterService.IsUsernameAvailable(dto.Id, dto.Username!);
                
                 if (!isUsernameAvailable)
                 {
                     validationErrors["Username"] = "This username is not available";
                 }
-                
+
+               
 
                 if (dto.Password != dto.ConfirmedPassword)
                 {
                     validationErrors["ConfirmedPassword"] = "The provided passwords do not match";
                 }
+                
 
+               
+                
                 if (validationErrors.Any()) return BadRequest(validationErrors);
-              
+                else await Console.Out.WriteLineAsync("Validation dictionary empty");
+
 
                 var gm = await _applicationService.gamemasterService.UpdateGamemasterAsync(dto);
 
@@ -158,7 +150,7 @@ namespace QuizballApp.Controllers
 
         // POST: api/Gamemasters
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> PostGamemaster(CreateGamemasterDTO dto)
         {
             if (dto is null) return BadRequest("Invalid data");

@@ -72,7 +72,7 @@ namespace QuizballApp.Controllers
 
         // DELETE: api/Participants/5
         [HttpDelete("{id}")]
-        [Authorize]
+       /* [Authorize]*/
         public async Task<IActionResult> DeleteParticipant(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -91,20 +91,27 @@ namespace QuizballApp.Controllers
             }
         }
 
-        [HttpPut("{id}/{name}", Name = "ChangeParticipantsName")]
-        [Authorize]
+        [HttpPut("{id}", Name = "ChangeParticipantsName")]
+        /*[Authorize]*/
         public async Task<IActionResult> ChangeParticipantsName(int id, ChangeParticipantsNameDTO dto)
         {
+
+            await Console.Out.WriteLineAsync("DTO: " + dto);
+            await Console.Out.WriteLineAsync("Id: " + id);
+
             if (dto is null || id == 0) return BadRequest("Invalid data");
             if (id != dto.GamemasterId) return Unauthorized();
 
             try
             {
+                await Console.Out.WriteLineAsync("We are here!1");
                 var isNameAvailable = await _applicationService.participantService.CheckParticipantsNameAsync(id, dto.Name!);
                 if (!isNameAvailable) return BadRequest("Unavailable name");
 
-                var participant = await _applicationService.participantService.ChangeParticipantsNameAsync(id, dto.Name!);
+                await Console.Out.WriteLineAsync("We are here!2");
+                var participant = await _applicationService.participantService.ChangeParticipantsNameAsync(dto.ParticipantId, dto.Name!);
 
+                
                 if (participant is null)
                 {
                     return BadRequest("Something went wrong");

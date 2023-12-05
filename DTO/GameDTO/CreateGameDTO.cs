@@ -1,6 +1,6 @@
 ﻿namespace QuizballApp.DTO.GameDTO
 {
-    public interface CreateGameDTO
+    public class CreateGameDTO
     {
         public string? Type { get; set; }
 
@@ -12,7 +12,7 @@
 
         public DateTime? EndDate { get; set; }
 
-        public TimeSpan? Duration { get; set; }
+        public DateTime? Duration { get; set; }
 
         public int GamemasterId { get; set; }
 
