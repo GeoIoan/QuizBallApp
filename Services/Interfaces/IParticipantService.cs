@@ -10,6 +10,6 @@ namespace QuizballApp.Services
         Task<ParticipantReadOnlyDTO> DeleteParticipantAsync(int id);
         Task<List<ParticipantReadOnlyDTO>> GetParticipantsByTypeAsync(int gamemasterId, string type);
    
-        Task<bool> CheckParticipantsNameAsync(int gamemasterId, string name);
+        Task<bool> CheckParticipantsNameAsync(int? gamemasterId, string name);
     }
 }

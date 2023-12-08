@@ -37,22 +37,9 @@ namespace QuizballApp.Controllers
 
             try
             {
-                var validationErrors = new Dictionary<string, string>();
+                var isNameAvailable = await _applicationService.participantService.CheckParticipantsNameAsync(dto.GamemasterId, dto.Name!);
+                if (!isNameAvailable) return BadRequest("Unavailable name");
 
-                if (!TryValidateModel(dto))
-                {
-
-                    foreach (var key in ModelState.Keys)
-                    {
-                        var modelStateEntry = ModelState[key];
-                        if (modelStateEntry!.Errors.Any())
-                        {
-                            validationErrors[key] = modelStateEntry.Errors.First().ErrorMessage;
-                        }
-                    }
-
-                    return BadRequest(validationErrors);
-                }
 
                 var participant = await _applicationService.participantService.CreateParticipantAsync(dto);
 

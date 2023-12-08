@@ -7,7 +7,7 @@ namespace QuizballApp.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        [HttpGet(Name = "Auth")]
+        [HttpGet("auth")]
         [Authorize]
         public IActionResult Auth()
         {

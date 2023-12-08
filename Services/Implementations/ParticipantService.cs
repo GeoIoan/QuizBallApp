@@ -45,7 +45,7 @@ namespace QuizballApp.Services
             }
         }
 
-        public async Task<bool> CheckParticipantsNameAsync(int gamemasterId, string name)
+        public async Task<bool> CheckParticipantsNameAsync(int? gamemasterId, string name)
         {
             try
             {

@@ -26,6 +26,7 @@ namespace QuizballApp.Authentication
                 var authDto = new AuthenticationDTO();
                 authDto.Id = gm.Id;
                 authDto.GamemasterName = gm.Username;
+                authDto.GamemasterEmail = gm.Email;
                 return authDto;
             }catch(DbException)
             {

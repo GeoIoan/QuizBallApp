@@ -15,8 +15,6 @@ namespace QuizballApp.Configuration
         {
             CreateMap<CreateGamemasterDTO, Gamemaster>()
                  .ForSourceMember(x => x.ConfirmedPassword, opt => opt.DoNotValidate());
-            CreateMap<UpdateGamemasterDTO, Gamemaster>()
-                 .ForSourceMember(x => x.ConfirmedPassword, opt => opt.DoNotValidate());
             CreateMap<CreateParticipantDTO, Participant>();
             CreateMap<Participant, ParticipantReadOnlyDTO>();
             CreateMap<CreateQuestionDTO, Question>();

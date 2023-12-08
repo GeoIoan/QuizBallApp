@@ -1,4 +1,5 @@
 ﻿using QuizballApp.Data;
+using QuizballApp.DTO.GamemasterDTO;
 
 namespace QuizBall.Repositories
 {
@@ -8,5 +9,11 @@ namespace QuizBall.Repositories
      
 
         Task<bool>CheckUsernameAsync(int gamemasterId, string username);
+
+        Task<bool> CheckEmailAsync(CheckEmailDTO dto);
+
+        Task<UpdateGamemasterReadOnlyDTO> UpdateGamemasterAsync(UpdateGamemasterDTO dto);
+
+        Task<bool> ChangeGamemasterPasswordAsync(ChangeGamemasterPassDTO dto);
     }
 }

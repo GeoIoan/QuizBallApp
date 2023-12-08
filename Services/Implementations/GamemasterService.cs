@@ -27,6 +27,41 @@ namespace QuizballApp.Services
             _logger = Log.ForContext<GamemasterService>(); 
         }
 
+        public async Task<bool> ChangeGamemasterPassAsync(ChangeGamemasterPassDTO dto)
+        {
+            try
+            {
+                var didPassChange = await _unitOfWork.GamemasterRepository.ChangeGamemasterPasswordAsync(dto);
+
+                await _unitOfWork.SaveAsync();
+                
+                if (!didPassChange) 
+                {
+
+                    _logger.Error("Cound not change pass of gm with id " + dto.Id + " due to an unexpected error");
+                    return false;
+                }
+
+                var gm = await _unitOfWork.GamemasterRepository.GetAsync(dto.Id);
+
+
+                var isValid = EncryptionUtil.IsValidPassword(dto.Password!, gm!.Password!);
+
+                if (!isValid)
+                {
+                    _logger.Error("Cound not change pass of gm with id " + dto.Id + " due to an unexpected error");
+                    return false;
+                }
+
+                return true;
+            }
+            catch (DbException)
+            {
+                _logger.Error("Cound not change pass of gm with id " + dto.Id + " due to a server error");
+                throw;
+            }
+        }
+
         public string CreateGamemasterToken(int gmId, string gmName, string appSecurityKey)
         {
             Console.WriteLine(appSecurityKey);
@@ -87,6 +122,21 @@ namespace QuizballApp.Services
             }
         }
 
+        public async Task<bool> IsEmailAvailable(CheckEmailDTO dto)
+        {
+            try
+            {
+                var isAvailable = await _unitOfWork.GamemasterRepository.CheckEmailAsync(dto);
+                await _unitOfWork.SaveAsync();
+                return isAvailable;
+            }
+            catch (DbException)
+            {
+                _logger.Error("Could not check email " + dto.Email + " due to a server error");
+                throw;
+            }
+        }
+
         public async Task<bool> IsUsernameAvailable(int gamemasterId ,string username)
         {
             try
@@ -124,42 +174,36 @@ namespace QuizballApp.Services
             }
         }
 
-        public async Task<Gamemaster?> UpdateGamemasterAsync(UpdateGamemasterDTO dto)
+        public async Task<UpdateGamemasterReadOnlyDTO> UpdateGamemasterAsync(UpdateGamemasterDTO dto)
         {
             try
             {
-                await Console.Out.WriteLineAsync("Dto for update: " + dto);
-                await _unitOfWork.GamemasterRepository.UpdateAsync(dto.Id, _mapper.Map<Gamemaster>(dto));
-                await Console.Out.WriteLineAsync("we are here!");
                 
-                var gm = await _unitOfWork.GamemasterRepository.GetAsync(dto.Id);
-               
-
-                await Console.Out.WriteLineAsync($"{gm}");
-                await Console.Out.WriteLineAsync("Dto for update: " + dto);
-
+                var updatedGm = await _unitOfWork.GamemasterRepository.UpdateGamemasterAsync(dto);
                 await _unitOfWork.SaveAsync();
 
-                if (gm is null || !AreEquivalent(gm, dto))
-                {
-                    _logger.Error("Something went wrong while updating gamemaster " + dto.Id);
-                    return null;
-                }
+                var gm = await _unitOfWork.GamemasterRepository.GetAsync(dto.Id);
                 
-                return gm;
+
+                if(updatedGm is null || !AreEquivalent(gm!, updatedGm))
+                {
+                    _logger.Error("Something went wrong whille updating gamemaster with " + dto.Id);
+                    return null!;
+                } 
+
+                return updatedGm;
             }
             catch (DbException)
             {
-                _logger.Error("Cound not sign up user with username " + dto.Username + " due to a server error");
+                _logger.Error("Cound not update gm with id " + dto.Id + " due to a server error");
                 throw;
             }
         }
 
-        private bool AreEquivalent(Gamemaster gm, UpdateGamemasterDTO dto)
+        private bool AreEquivalent(Gamemaster gm, UpdateGamemasterReadOnlyDTO dto)
         {
             return gm.Id == dto.Id &&
                    gm.Username == dto.Username &&
-                   gm.Password == dto.Password &&
                    gm.Email == dto.Email;
         }
     }

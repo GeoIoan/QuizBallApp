@@ -22,6 +22,7 @@ namespace QuizballApp.DTO.GamemasterDTO
 
         [Required(ErrorMessage = "This field is required")]
         [EmailAddress(ErrorMessage = "Please provide a valid email adress")]
+        [StringLength(100, MinimumLength = 10, ErrorMessage = "Email should be between 10 - 100 characters")]
         public string? Email { get; set; }
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.JSInterop.Infrastructure;
 using QuizballApp.Authentication;
 using QuizballApp.Data;
 using QuizballApp.DTO.GamemasterDTO;
@@ -37,22 +38,7 @@ namespace QuizballApp.Controllers
         {
             if (dto is null || dto.Username is null || dto.Password is null) return BadRequest("Invalid data");
 
-            var validationErrors = new Dictionary<string, string>();
-
-            if (!TryValidateModel(dto))
-            {
-
-                foreach (var key in ModelState.Keys)
-                {
-                    var modelStateEntry = ModelState[key];
-                    if (modelStateEntry!.Errors.Any())
-                    {
-                        validationErrors[key] = modelStateEntry.Errors.First().ErrorMessage;
-                    }
-                }
-
-                return BadRequest(validationErrors);
-            }
+                  
             try
             {
 
@@ -110,8 +96,6 @@ namespace QuizballApp.Controllers
 
                 var validationErrors = new Dictionary<string, string>();
 
-              
-
 
                 var isUsernameAvailable = await _applicationService.gamemasterService.IsUsernameAvailable(dto.Id, dto.Username!);
                
@@ -120,16 +104,12 @@ namespace QuizballApp.Controllers
                     validationErrors["Username"] = "This username is not available";
                 }
 
-               
+                var isEmailAvailable = await _applicationService.gamemasterService.IsEmailAvailable(new CheckEmailDTO()
+                { Id = dto.Id, Email = dto.Email });
 
-                if (dto.Password != dto.ConfirmedPassword)
-                {
-                    validationErrors["ConfirmedPassword"] = "The provided passwords do not match";
-                }
-                
+                if (!isEmailAvailable) validationErrors["Email"] = "This email is not available";
 
-               
-                
+                                        
                 if (validationErrors.Any()) return BadRequest(validationErrors);
                 else await Console.Out.WriteLineAsync("Validation dictionary empty");
 
@@ -141,7 +121,7 @@ namespace QuizballApp.Controllers
                     return StatusCode(500, "Something went wrong");
                 }
 
-                return Ok("Gamemaste with id " + id + " was updated");
+                return Ok(gm);
             } catch (DbException)
             {
                 return StatusCode(500, "Db failure");
@@ -159,19 +139,6 @@ namespace QuizballApp.Controllers
             {
                 var validationErrors = new Dictionary<string, string>();
 
-                if (!TryValidateModel(dto))
-                {
-
-                    foreach (var key in ModelState.Keys)
-                    {
-                        var modelStateEntry = ModelState[key];
-                        if (modelStateEntry!.Errors.Any())
-                        {
-                            validationErrors[key] = modelStateEntry.Errors.First().ErrorMessage;
-                        }
-                    }
-                    return BadRequest(validationErrors);
-                }
 
                 var isUsernameAvailable = await _applicationService.gamemasterService.IsUsernameAvailable(0, dto.Username!);
 
@@ -185,6 +152,12 @@ namespace QuizballApp.Controllers
                 {
                     validationErrors["ConfirmedPassword"] = "The provided passwords do not match";
                 }
+
+
+                var isEmailAvailable = await _applicationService.gamemasterService.IsEmailAvailable(new CheckEmailDTO()
+                { Id = 0, Email = dto.Email });
+
+                if (!isEmailAvailable) validationErrors["Email"] = "This email is not available";
 
                 if (validationErrors.Any()) return BadRequest(validationErrors);
 
@@ -202,6 +175,59 @@ namespace QuizballApp.Controllers
                 return StatusCode(500, "Db failure");
             }
         }
+
+        [HttpPost("checkPass")]
+        [Authorize]
+        public async Task<IActionResult> CheckGamemasterPass(CheckGamemastersPassDTO dto)
+        {
+            if (dto is null) return BadRequest("Invalid data");
+
+          
+
+            if (dto.Password != dto.ConfirmedPassword) return BadRequest("Passwords do not match");
+
+            try
+            {
+                var authenticated = await auth.CheckGamemasterAsync(new LoginDTO()
+                {
+                    Username= dto.Username,
+                    Password = dto.Password
+                });
+
+                await Console.Out.WriteLineAsync("Aythenticated: " + authenticated);
+
+                if (authenticated is null) return Unauthorized();
+
+                return Ok();
+            } catch(DbException){
+                return StatusCode(500, "Db failure");
+            }
+        }
+
+        [HttpPut("changePass/{id}")]
+        [Authorize]
+        public async Task<IActionResult> ChangeGamemasterPass(int id, ChangeGamemasterPassDTO dto)
+        {
+            if(id == 0) return BadRequest("Invalid data");
+            if (dto is null) return BadRequest("Invalid data");
+
+            if (id != dto.Id) return Unauthorized();
+
+            if (dto.Password != dto.ConfirmedPassword) return BadRequest("Passwords do not match");
+            try
+            {
+                var didPassChange = await _applicationService.gamemasterService.ChangeGamemasterPassAsync(dto);
+               
+                if (!didPassChange) return StatusCode(500, "Something went wrong");
+
+                return Ok();
+            }
+            catch (DbException)
+            {
+                return StatusCode(500, "Db failure");
+            }
+        }
+
 
         // DELETE: api/Gamemasters/5
         [HttpDelete("{id}")]

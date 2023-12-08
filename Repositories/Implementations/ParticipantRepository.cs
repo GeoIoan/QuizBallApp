@@ -29,7 +29,7 @@ namespace QuizBall.Repositories
             return participant;
         }
 
-        public async Task<bool> CheckParticipantsName(int gamemasterid, string participantsName)
+        public async Task<bool> CheckParticipantsName(int? gamemasterid, string participantsName)
         {
             await Console.Out.WriteLineAsync("We are in check participant name repo method");
             var participant = await _context.Participants.Where(p => (p.GamemasterId == gamemasterid) && (p.Name == participantsName)).FirstOrDefaultAsync();

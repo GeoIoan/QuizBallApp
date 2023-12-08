@@ -7,6 +7,6 @@ namespace QuizBall.Repositories
         Task<IEnumerable<Participant>> GetParticipantsByTypeAsync(int gamemasterId, string participantType);
         Task<Participant?> ChangeParticipantsName(int participantId, string newName);
 
-        Task<bool> CheckParticipantsName(int gamemasterid,  string participantsName);
+        Task<bool> CheckParticipantsName(int? gamemasterid,  string participantsName);
     }
 }
