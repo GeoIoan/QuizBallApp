@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+///<summary>
+///This class represents the category entity.Instances can be made
+///out of this class that can hold data like the category name 
+///and the number of the diffculty levels each category has.
+///</summary>
 
 namespace QuizballApp.Data;
 

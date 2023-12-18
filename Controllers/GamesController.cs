@@ -64,6 +64,25 @@ namespace QuizballApp.Controllers
             }
         }
 
+
+        [HttpPost("AddParticipantsToGame")]
+        public async Task<IActionResult> AddParticipants(AddParticipantsDTO dto)
+        {
+            if (dto is null) return BadRequest("Invalid data");
+            try
+            {
+                var areParticipantsAdded = await _applicationService.gameService.AddParticipantsAsync(dto.Id, dto.Participant1!, dto.Participant2!);
+
+                if (!areParticipantsAdded) return StatusCode(500, "Something went wrong");
+
+                return Ok();
+            }
+            catch (DbException)
+            {
+                return StatusCode(500, "Db failure");
+            }
+        }
+
         [HttpPut]
         [Authorize]
         public async Task<IActionResult> UpdateGame(GamesEndDTO dto)

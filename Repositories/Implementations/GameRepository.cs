@@ -1,6 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
 using QuizballApp.DTO.GameDTO;
+///<summary>
+///This class extends the BaseRepository<T> abstract class and also implements
+///the IGameRepository Interface providing all the needed functionality to
+///the Game Entity related operations. Instances can be made out of this class.
+///<summary>
 
 namespace QuizBall.Repositories
 {
@@ -16,12 +21,9 @@ namespace QuizBall.Repositories
 
         public async Task<IEnumerable<Game>> GetGameByParticipantsAsync(int gamemasterId, int participantId1, int participantId2)
         {
-            var games = await _context.Games.Where(g => (g.GamemasterId == gamemasterId) && 
-                                                         (g.Participant1Id == participantId1 
-                                                         || g.Participant1Id == participantId2)
-                                                         && (g.Participant2Id == participantId1 
-                                                         || g.Participant2Id == participantId2))
-                                                         .ToListAsync();
+            var games = await _context.Games
+                            .Where(g => g.GamemasterId == gamemasterId && g.Participants.Any(p => p.Id == participantId1 || p.Id == participantId2))
+                            .ToListAsync();
 
             return games;
         }
@@ -40,7 +42,6 @@ namespace QuizBall.Repositories
                 game!.Questions.Add(q);
             });
            
-            await _context.SaveChangesAsync();
 
             questions.ForEach(q =>
             {
@@ -61,6 +62,22 @@ namespace QuizBall.Repositories
 
             _context.Games.Update(game);
             return game;
+        }
+
+        public async Task<bool> AddParticipantsToGame(int gameId, Participant participant1, Participant participant2)
+        {
+            bool isParticipantIn = true;
+
+            var game = await _context.Games
+                .Include(g => g.Questions)
+                .FirstOrDefaultAsync(g => g.Id == gameId);
+
+            game!.Participants.Add(participant1);
+            game.Participants.Add(participant2);
+
+            if (!game.Participants.Contains(participant1) || !game.Participants.Contains(participant2)) isParticipantIn = false;
+
+            return isParticipantIn;
         }
     }
 }

@@ -75,12 +75,6 @@ public partial class QuizballDbContext : DbContext
 
             entity.HasIndex(e => e.GamemasterId, "IX_GAMEMASTER_ID");
 
-            entity.HasIndex(e => new { e.Participant1Id, e.Participant2Id }, "IX_GAMES_PARTICIPANTS");
-
-            entity.HasIndex(e => e.Participant1Id, "IX_GAMES_PARTICIPANTS1");
-
-            entity.HasIndex(e => e.Participant2Id, "IX_GAMES_PARTICIPANTS2");
-
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Custom).HasColumnName("CUSTOM");
             entity.Property(e => e.Duration)
@@ -90,8 +84,6 @@ public partial class QuizballDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("END_DATE");
             entity.Property(e => e.GamemasterId).HasColumnName("GAMEMASTER_ID");
-            entity.Property(e => e.Participant1Id).HasColumnName("PARTICIPANT1_ID");
-            entity.Property(e => e.Participant2Id).HasColumnName("PARTICIPANT2_ID");
             entity.Property(e => e.Score)
                 .HasMaxLength(10)
                 .HasColumnName("SCORE");
@@ -109,14 +101,6 @@ public partial class QuizballDbContext : DbContext
                 .HasForeignKey(d => d.GamemasterId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_GAME_GAMEMASTER");
-
-            entity.HasOne(d => d.Participant1).WithMany(p => p.GameParticipant1s)
-                .HasForeignKey(d => d.Participant1Id)
-                .HasConstraintName("FK_GAMES_PARTICIPANTS1");
-
-            entity.HasOne(d => d.Participant2).WithMany(p => p.GameParticipant2s)
-                .HasForeignKey(d => d.Participant2Id)
-                .HasConstraintName("FK_GAMES_PARTICIPANTS2");
         });
 
         modelBuilder.Entity<Gamemaster>(entity =>
@@ -170,6 +154,25 @@ public partial class QuizballDbContext : DbContext
             entity.HasOne(d => d.Gamemaster).WithMany(p => p.Participants)
                 .HasForeignKey(d => d.GamemasterId)
                 .HasConstraintName("FK_PARTICIPANTS_GAMEMASTERS");
+
+            entity.HasMany(d => d.Games).WithMany(p => p.Participants)
+             .UsingEntity<Dictionary<string, object>>(
+                "GamesParticipants",
+                  r => r.HasOne<Game>().WithMany()
+                        .HasForeignKey("GameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                         .HasConstraintName("FK_GAME_ID"),
+                    l => l.HasOne<Participant>().WithMany()
+                        .HasForeignKey("ParticipantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasConstraintName("FK_PARTICIPANT_ID"),
+                     je =>
+                     {
+                         je.HasKey("GameId", "ParticipantId");
+                         je.ToTable("GAMES_PARTICIPANTS");
+                         je.IndexerProperty<int>("ParticipantId").HasColumnName("PARTICIPANT_ID");
+                         je.IndexerProperty<int>("GameId").HasColumnName("GAME_ID");
+                     });
         });
 
         modelBuilder.Entity<Question>(entity =>

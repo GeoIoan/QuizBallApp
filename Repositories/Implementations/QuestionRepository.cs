@@ -1,5 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
+///<summary>
+///This class extends the BaseRepository<T> abstract class and also implements
+///the IQuestion Interface providing all the needed functionality to
+///the Question Entity related operations. Instances can be made out of this class.
+///<summary>
 
 namespace QuizBall.Repositories
 {
@@ -16,11 +21,12 @@ namespace QuizBall.Repositories
             return customQuestions;
         }
 
-        public async Task<Question> GetRandomQuestionAsync(int? gamemasterId, int categoryId, int difficultyId)
+        public async Task<Question> GetRandomQuestionAsync(int? gamemasterId, int categoryId, int difficultyId, int lastQuestion)
         {
             var filteredQuestionsTask = await _context.Questions.Where(q => (q.GamemasterId == gamemasterId) 
                                                             && (q.CategoryId == categoryId)
-                                                            && (q.DifficultyId == difficultyId))
+                                                            && (q.DifficultyId == difficultyId)
+                                                            &&(q.Id != lastQuestion))
                                                             .ToListAsync();
             
             var filteredQuestions = filteredQuestionsTask;

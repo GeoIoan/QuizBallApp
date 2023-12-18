@@ -245,7 +245,7 @@ namespace QuizballApp.Controllers
                     return StatusCode(500, "Something went wrong");
                 }
 
-                return Ok("Gamemaster " + id + " was deleted");
+                return Ok();
             }catch(DbException)
             {
                 return StatusCode(500, "Db failure");

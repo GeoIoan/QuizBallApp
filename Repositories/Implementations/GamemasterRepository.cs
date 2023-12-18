@@ -3,6 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
 using QuizballApp.DTO.GamemasterDTO;
 using UsersApp.Security;
+///<summary>
+///This class extends the BaseRepository<T> abstract class and also implements
+///the IGamemasterRepository Interface providing all the needed functionality to
+///the Gamemaster Entity related operations. Instances can be made out of this class.
+///<summary>
 
 namespace QuizBall.Repositories
 {
@@ -66,7 +71,7 @@ namespace QuizBall.Repositories
             }
         }
 
-        public async Task<UpdateGamemasterReadOnlyDTO> UpdateGamemasterAsync(UpdateGamemasterDTO dto)
+        public async Task<UpdateGamemasterReadOnlyDTO?> UpdateGamemasterAsync(UpdateGamemasterDTO dto)
         {
            var gm = await _context.Gamemasters.Where(g => g.Id == dto.Id).FirstOrDefaultAsync();
             if (gm is null) return null;
@@ -86,8 +91,6 @@ namespace QuizBall.Repositories
            
             return readOnlyGm;
         }
-
-
 
     }
 }

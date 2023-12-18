@@ -1,5 +1,7 @@
-﻿
-using QuizballApp.Data;
+﻿using QuizballApp.Data;
+///<summary>
+///This class implements the IUnitOfWork interface.
+///<summary>
 
 namespace QuizBall.Repositories
 {

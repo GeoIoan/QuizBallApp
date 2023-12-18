@@ -1,5 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+///<summary>
+///This class represents the gamemaster entity. Intances can be
+///made of this class that hold data like the gamemaster username,
+///the gamemaster password and the gamemaster email.
+///<summary>
+
 
 namespace QuizballApp.Data;
 

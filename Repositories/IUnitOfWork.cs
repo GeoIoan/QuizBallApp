@@ -1,4 +1,10 @@
-﻿
+﻿///<summary>
+///This interface is based on the UnitOfWork pattern.
+///It contains all the repositories as fields and a method
+///that asychronously saves transactions.The point of this pattern
+///is to manage all the transactions using one class.
+///<summary>
+
 namespace QuizBall.Repositories
 {
     public interface IUnitOfWork
@@ -10,6 +16,10 @@ namespace QuizBall.Repositories
 
         public CategoryRepository CategoryRepository { get; }
 
+        /// <summary>
+        /// Asychronously saves transaction
+        /// </summary>
+        /// <returns>(bool) True is save False if not</returns>
         Task<bool> SaveAsync();
 
     }

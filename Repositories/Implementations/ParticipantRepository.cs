@@ -1,6 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
 
+///<summary>
+///This class extends the BaseRepository<T> abstract class and also implements
+///the IParticipant Interface providing all the needed functionality to
+///the Participant Entity related operations. Instances can be made out of this class.
+///<summary>
+
 namespace QuizBall.Repositories
 {
     public class ParticipantRepository : BaseRepository<Participant>, IParticipantRepository

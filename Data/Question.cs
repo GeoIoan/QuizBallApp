@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
+///<summary>
+/// This class represents a question entity. Instances can be made out of this
+/// class that holds data like the questions itself ,its answer and more
+///<summary>
+
 namespace QuizballApp.Data;
 
 public partial class Question
@@ -42,7 +47,8 @@ public partial class Question
                GamemasterId == question.GamemasterId &&
                CategoryId == question.CategoryId &&
                DifficultyId == question.DifficultyId &&
-               Answers == question.Answers;
+               Answers == question.Answers &&
+               FiftyFifty == question.FiftyFifty;
     }
 
     public override int GetHashCode()

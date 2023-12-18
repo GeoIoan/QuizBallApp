@@ -1,6 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
 
+///<summary>
+///This is and abstract class thtatimplements the IBaseRepository interface.
+///Every repository that needs to use any method that is implemented here must
+///extend this class. No instances can be made out of this class.
+///<summary>
+
 namespace QuizBall.Repositories
 {
     public abstract class BaseRepository<T> : IBaseRepository<T>
@@ -47,14 +53,18 @@ namespace QuizBall.Repositories
         }
 
 
-        public virtual async Task UpdateAsync(int id,T entity)
+        public virtual async Task<T?> UpdateAsync(int id,T entity)
         {
             var existingEntity = _context.Set<T>().Find(id);
             if (existingEntity != null)
             {
                 _context.Entry(existingEntity).CurrentValues.SetValues(entity);
-                await _context.SaveChangesAsync();
             }
+
+            var updatedEntity = _context.Set<T>().Find(id);
+
+            if (updatedEntity!.Equals(entity)) return updatedEntity;
+            else return null;
         }
     }
 }

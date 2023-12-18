@@ -17,9 +17,5 @@
         public int GamemasterId { get; set; }
 
         public byte? Custom { get; set; }
-
-        public int? Participant1Id { get; set; }
-
-        public int? Participant2Id { get; set; }
     }
 }

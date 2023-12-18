@@ -127,13 +127,14 @@ namespace QuizballApp.Controllers
 
         [HttpGet(Name = "GetRandomQuestion")]
    
-        public async Task<IActionResult> GetRandomQuestion(int gamemasterId, int categoryId, int difficultyId)
+        public async Task<IActionResult> GetRandomQuestion(int gamemasterId, int categoryId, int difficultyId, int lastQuestion)
         {
             var dto = new SelectQuestionDTO()
             {
                 Gamemaster_id = gamemasterId,
                 Category_id = categoryId,
-                Difficulty_id = difficultyId
+                Difficulty_id = difficultyId,
+                LastQuestion = lastQuestion
             };
 
             await Console.Out.WriteLineAsync("SelectQuestionDto: " + dto);

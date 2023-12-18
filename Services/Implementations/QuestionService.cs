@@ -9,6 +9,9 @@ using QuizballApp.DTO;
 using QuizballApp.DTO.QuestionDTO;
 using Serilog;
 
+///<summary>
+///Implements that IQeustionService interface. Instances can be made out of this class.
+///<summary>
 namespace QuizballApp.Services
 {
     public class QuestionService : IQuestionService
@@ -147,7 +150,7 @@ namespace QuizballApp.Services
         {
             try
             {
-                var question = await _unitOfWork.QuestionRepository.GetRandomQuestionAsync(dto.Gamemaster_id, dto.Category_id, dto.Difficulty_id);
+                var question = await _unitOfWork.QuestionRepository.GetRandomQuestionAsync(dto.Gamemaster_id, dto.Category_id, dto.Difficulty_id, dto.LastQuestion);
                 if (question == null)
                 {
                     _logger.Error("Something went wron while sellectin random question based on the criteria gamemaster: " + dto.Gamemaster_id + " , category:  " + dto.Category_id + " , difficulty level: " + dto.Difficulty_id);

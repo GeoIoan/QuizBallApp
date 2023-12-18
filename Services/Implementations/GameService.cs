@@ -1,4 +1,5 @@
-﻿using System.Data.Common;
+﻿
+using System.Data.Common;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -23,7 +24,25 @@ namespace QuizballApp.Services
             _logger = Log.ForContext<GamemasterService>();
         }
 
-        public async Task<bool> AddQuestionsAsync(int gameId, List<Question> questions)
+        public async Task<bool> AddParticipantsAsync(int gameId, Participant participant1, Participant participant2)
+        {
+            try
+            {
+                var added = await _unitOfWork.GameRepository.AddParticipantsToGame(gameId, participant1, participant2);
+                await _unitOfWork.SaveAsync();
+                if (!added) _logger.Error("The participants were not inserted in the list of game " + gameId + " due an unexpected error");
+
+                return added;
+            }
+            catch (DbException)
+            {
+                _logger.Error("The participants were not inserted in the list of game " + gameId + " due to server error");
+                throw;
+
+            } 
+        }
+
+            public async Task<bool> AddQuestionsAsync(int gameId, List<Question> questions)
         {
             try
             {
