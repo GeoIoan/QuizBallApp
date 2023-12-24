@@ -8,7 +8,8 @@ using QuizballApp.DTO.ParticipantsDTO;
 using Serilog;
 
 ///<summary>
-///Implements that IParticipantService interface. Instances can be made out of this class.
+///Implements that IParticipantService interface. 
+///Instances can be made out of this class.
 ///<summary>
 
 namespace QuizballApp.Services

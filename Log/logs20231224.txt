@@ -1,0 +1,29 @@
+[ 24-12-2023 10-20:11 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 24-12-2023 10-20:12 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] Creating key {5fa9bbec-0cdc-4ce2-b32c-734748dda3f5} with creation date 2023-12-24 08:20:12Z, activation date 2023-12-25 15:20:12Z, and expiration date 2024-03-23 08:20:11Z. 
+ [ 24-12-2023 10-20:12 Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository ] Writing data to file '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys\key-5fa9bbec-0cdc-4ce2-b32c-734748dda3f5.xml"'. 
+ [ 24-12-2023 10-20:13 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 24-12-2023 10-20:13 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 24-12-2023 10-20:13 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 24-12-2023 10-20:13 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 24-12-2023 10-20:13 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 24-12-2023 10-20:23 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger - - 
+ [ 24-12-2023 10-20:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger - - - 0 - - 449.5913ms 
+ [ 24-12-2023 10-20:24 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 24-12-2023 10-20:26 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 2356.6891ms 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/swagger-ui-bundle.js - - 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/swagger-ui.css - - 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/swagger-ui-standalone-preset.js - - 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/swagger-ui-bundle.js" was not modified 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] The file "/swagger-ui-standalone-preset.js" was not modified 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 62.2116ms 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 80.8135ms 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/swagger-ui.css - - - 200 144929 text/css 100.2225ms 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 184.6826ms 
+ [ 24-12-2023 10-20:28 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 24-12-2023 10-20:29 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 9.7655ms 
+ [ 24-12-2023 10-20:30 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 24-12-2023 10-20:30 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 301.0520ms 
+ [ 24-12-2023 10-26:01 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ 

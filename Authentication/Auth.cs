@@ -4,6 +4,11 @@ using QuizballApp.DTO.GamemasterDTO;
 using QuizballApp.Services;
 using Serilog;
 
+///<summary>
+///This class implements the IAuth interface. Instances can be
+///made out of this class.
+///</summary>>
+
 namespace QuizballApp.Authentication
 {
     public class Auth : IAuth

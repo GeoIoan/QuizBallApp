@@ -11,6 +11,13 @@ using QuizballApp.Data;
 using QuizballApp.DTO.GameDTO;
 using QuizballApp.Services;
 
+
+///<summary>
+///This class is used to handle all the incoming requests
+///concerning the Game Entity. Its methods conduct the
+///validation proccess, if needed, and then proceed to call the
+///nessecary methods of the service layer.
+///</summary>
 namespace QuizballApp.Controllers
 {
     [Route("api/[controller]")]
@@ -24,10 +31,16 @@ namespace QuizballApp.Controllers
             _applicationService = applicationService;
         }
 
-        // POST: api/Games
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that permforms the operation
+        /// of creating a new game.
+        /// </summary>
+        /// <param name="dto">(CreateGameDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost("CreateGame")]
-        /* [Authorize]*/
+        [Authorize]
         public async Task<IActionResult> PostGame(CreateGameDTO dto)
         {
             await Console.Out.WriteLineAsync("We are here");
@@ -46,6 +59,14 @@ namespace QuizballApp.Controllers
             }
         }
 
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that perform the operation
+        /// of creating relations between questions and games.
+        /// </summary>
+        /// <param name="dto">(AddQuestionsDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost("AddQuestionsToGame")]
         public async Task<IActionResult> AddQuestions(AddQuestionsDTO dto)
         {
@@ -64,7 +85,14 @@ namespace QuizballApp.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that perform the operation
+        /// of creating relations between participants and games.
+        /// </summary>
+        /// <param name="dto">(AddParticipantsDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost("AddParticipantsToGame")]
         public async Task<IActionResult> AddParticipants(AddParticipantsDTO dto)
         {
@@ -83,6 +111,11 @@ namespace QuizballApp.Controllers
             }
         }
 
+      /// <summary>
+      /// is not used will be deleted
+      /// </summary>
+      /// <param name="dto"></param>
+      /// <returns></returns>
         [HttpPut]
         [Authorize]
         public async Task<IActionResult> UpdateGame(GamesEndDTO dto)
@@ -100,6 +133,16 @@ namespace QuizballApp.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that permforms the operation
+        /// of getting the games that are related with 2 specific
+        /// participants.
+        /// </summary>
+        /// <param name="dto">(GetGameByParticipantsDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpGet(Name = "GetGamesByParticipants")]
         [Authorize]
         public async Task<IActionResult> GetGamesByPaarticipants(GetGameByParticipantsDTO dto)

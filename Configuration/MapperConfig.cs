@@ -7,6 +7,11 @@ using QuizballApp.DTO.GamemasterDTO;
 using QuizballApp.DTO.ParticipantsDTO;
 using QuizballApp.DTO.QuestionDTO;
 
+///<summary>
+///This class performs the operation of mapping
+///between dtos and and model instances.
+///</summary>
+
 namespace QuizballApp.Configuration
 {
     public class MapperConfig : Profile

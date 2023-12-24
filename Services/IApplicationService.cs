@@ -1,4 +1,8 @@
-﻿
+﻿///<summary>
+///This interface contains all the interfaces concerning 
+///the bussiness logic of the app. It is used so that we can
+///easily controll all the services of the application.
+///</summary>
 
 namespace QuizballApp.Services
 {

@@ -12,6 +12,13 @@ using QuizballApp.Data;
 using QuizballApp.DTO.ParticipantsDTO;
 using QuizballApp.Services;
 
+
+///<summary>
+///This class is used to handle all the incoming requests
+///concerning the Participant Entity. Its methods conduct the
+///validation proccess, if needed, and then proceed to call the
+///nessecary methods of the service layer.
+///</summary>
 namespace QuizballApp.Controllers
 {
     [Route("api/[controller]")]
@@ -25,10 +32,16 @@ namespace QuizballApp.Controllers
             _applicationService = applicationService;
         }
 
-        // POST: api/Participants
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Runs asychronously and calls the method
+        /// of the service layer that performs the
+        /// operation of creating a new participant
+        /// </summary>
+        /// <param name="dto">(CreateParticipantDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost]
-       /* [Authorize]*/
+        [Authorize]
         public async Task<IActionResult> PostParticipant(CreateParticipantDTO dto)
         {
             await Console.Out.WriteLineAsync("" + dto);
@@ -57,9 +70,15 @@ namespace QuizballApp.Controllers
             }
         }
 
-        // DELETE: api/Participants/5
+        /// <summary>
+        /// Runs asychronously and calls the method
+        /// of the service layer that perform the 
+        /// operation of deleting an existing participant.
+        /// </summary>
+        /// <param name="id">(int) the id of the paricipant</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpDelete("{id}")]
-       /* [Authorize]*/
+        [Authorize]
         public async Task<IActionResult> DeleteParticipant(int id)
         {
             if (id == 0) return BadRequest("Invalid data");
@@ -78,8 +97,19 @@ namespace QuizballApp.Controllers
             }
         }
 
-        [HttpPut("{id}", Name = "ChangeParticipantsName")]
-        /*[Authorize]*/
+        /// <summary>
+        /// Runs asychronously and calls the method
+        /// of the service layer that performs the 
+        /// operation of changing the name of specific
+        /// participant who is related to specific 
+        /// gamemaster
+        /// </summary>
+        /// <param name="id">(int) the of the gamemaster</param>
+        /// <param name="dto">(ChangeParticipantsNameDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
+        [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> ChangeParticipantsName(int id, ChangeParticipantsNameDTO dto)
         {
 
@@ -113,9 +143,18 @@ namespace QuizballApp.Controllers
             }
         }
 
-
-        [HttpGet("{id}/{type}", Name = "GetParticipantByType")]
-        /*[Authorize]*/
+        /// <summary>
+        /// Runs asychronously and calls the method
+        /// of the service layer that perform the 
+        /// operation of getting all the participants
+        /// of a specific type that are related to a
+        /// specific gamemaster
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <param name="type">(string) the type of the participants</param>
+        /// <returns>(IActionResult) the response to the request</returns>
+        [HttpGet("{id}/{type}")]
+        [Authorize]
         public async Task<IActionResult> GetParticipantByType(int id, string type)
         {
             if (id == 0 || type.IsNullOrEmpty()) return BadRequest("Invalid data");

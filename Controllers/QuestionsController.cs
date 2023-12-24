@@ -15,6 +15,13 @@ using QuizballApp.DTO;
 using QuizballApp.DTO.QuestionDTO;
 using QuizballApp.Services;
 
+///<summary>
+///This class is used to handle all the incoming requests
+///concerning the Question Entity. Its methods conduct the
+///validation proccess, if needed, and then proceed to call the
+///nessecary methods of the service layer.
+///</summary>
+
 namespace QuizballApp.Controllers
 {
     [Route("api/[controller]")]
@@ -28,10 +35,16 @@ namespace QuizballApp.Controllers
             this._applicationService = applicationService;
         }
 
-       
-
-        // PUT: api/Questions/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Runs asychronously and calls a method
+        /// from the service layer that performs the
+        /// operation of updating an existing question of
+        /// a specific gamemaster.
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <param name="dto">(UpdateQuestionDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>        
         [HttpPut("{id}")]
         [Authorize]
         public async Task<IActionResult> PutQuestion(int id, UpdateQuestionDTO dto)
@@ -57,8 +70,15 @@ namespace QuizballApp.Controllers
             }
         }
 
-        // POST: api/Questions
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Runs asychronously and calls a method
+        /// from the service layer that performs the
+        /// operation of creating a new question made
+        /// by a speicific gamemaster
+        /// </summary>
+        /// <param name="dto">(CreateQuestionDTO) Contains all the data received from the client
+        ///                                that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> PostQuestion(CreateQuestionDTO dto)
@@ -80,7 +100,14 @@ namespace QuizballApp.Controllers
             }
         }
 
-        // DELETE: api/Questions/5
+        /// <summary>
+        /// Runs asychronously and calls a method
+        /// from the service layer that performs 
+        /// the operation of deleting a question 
+        /// created by specific gamemaster.
+        /// </summary>
+        /// <param name="id">(int) the id of the question</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task<IActionResult> DeleteQuestion(int id)
@@ -103,7 +130,15 @@ namespace QuizballApp.Controllers
             }
         }
 
-        [HttpGet("{id}", Name = "GetCustomQuestions")]
+
+        /// <summary>
+        /// Runs asychronously and calls the method
+        /// that performs the operation the returns the 
+        /// custom questions of a specific gamemaster
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <returns>(IActionResult) the response to the request</returns>
+        [HttpGet("{id}")]
         [Authorize]
         public async Task<IActionResult> GetCustomQuestions(int id)
         {
@@ -125,8 +160,20 @@ namespace QuizballApp.Controllers
 
         }
 
-        [HttpGet(Name = "GetRandomQuestion")]
-   
+
+        /// <summary>
+        /// Runs asychronously and calls a method 
+        /// from the service layer that returns a 
+        /// random question of specific category and
+        /// difficulty.
+        /// </summary>
+        /// <param name="gamemasterId">(int) the id of the gamemaster</param>
+        /// <param name="categoryId">(int) the id of the category</param>
+        /// <param name="difficultyId">(int) the id of the difficulty level</param>
+        /// <param name="lastQuestion">(int) the id of the last question
+        ///                             that was asked and was meeting that criteria</param>
+        /// <returns>(IActionResult) the response to the request</returns>
+        [HttpGet] 
         public async Task<IActionResult> GetRandomQuestion(int gamemasterId, int categoryId, int difficultyId, int lastQuestion)
         {
             var dto = new SelectQuestionDTO()
@@ -157,7 +204,13 @@ namespace QuizballApp.Controllers
             }
         }
 
-        [HttpPost("{id}", Name = "ConnectQuestionWithGame")]
+        /// <summary>
+        /// we do not use that
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost("{id}")]
         [Authorize]
         public async Task<IActionResult> AddGameToQuestion(int id, InsertGameToQuestionDTO dto)
         {
@@ -174,7 +227,17 @@ namespace QuizballApp.Controllers
             }
         }
 
-        [HttpGet("{gId}/{cId}", Name = "GetCustomQuestionsByCategory")]
+        /// <summary>
+        /// Runs asychronously and calls a 
+        /// method that perform the operation
+        /// of getting all the custom questions
+        /// of a specific gamemaster filtered by
+        /// category.
+        /// </summary>
+        /// <param name="gId">(int) the id of a gamemaster</param>
+        /// <param name="cId">(int) the id of the category</param>
+        /// <returns>(IActionResult) the response to the request</returns>
+        [HttpGet("{gId}/{cId}")]
         [Authorize]
         public async Task<IActionResult> GetCustomQuestionsByCategory(int gId, int cId)
         {

@@ -11,6 +11,13 @@ using Microsoft.IdentityModel.Tokens;
 using QuizballApp.Data;
 using QuizballApp.Services;
 
+///<summary>
+///This class is used to controll the incoming requests
+///concerning the Category Entity. Its methods conduct the
+///validation proccess, if needed, and then proceed to call the
+///nessecary methods of the service layer.
+///</summary>>
+
 namespace QuizballApp.Controllers
 {
     [Route("api/[controller]")]
@@ -24,7 +31,11 @@ namespace QuizballApp.Controllers
             _applicationService = applicationService;
         }
 
-        // GET: api/Categories
+        /// <summary>
+        /// Runs asychronously and calls the nessecary service layer
+        /// method so that returns all the categories of the game.
+        /// </summary>
+        /// <returns>(IActionResult) The repsonse to the request</returns>
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> GetCategories()

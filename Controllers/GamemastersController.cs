@@ -16,6 +16,13 @@ using QuizballApp.Data;
 using QuizballApp.DTO.GamemasterDTO;
 using QuizballApp.Services;
 
+///<summary>
+///This class is used to handle all the incoming requests
+///concerning the Gamemaster Entity. Its methods conduct the
+///validation proccess, if needed, and then proceed to call the
+///nessecary methods of the service layer.
+///</summary>>
+
 namespace QuizballApp.Controllers
 {
     [Route("api/[controller]")]
@@ -33,12 +40,19 @@ namespace QuizballApp.Controllers
             this._configuration = configuration;
         }
 
+        /// <summary>
+        /// Runs asychronously and calls the nessecary
+        /// method of the service layer the performs
+        /// the login operation of a gamemaster.
+        /// </summary>
+        /// <param name="dto">(LoginDTO) Contains all the data received from the client
+        ///                             that are needed for this operation</param>
+        /// <returns>(IActionResult) the resposne to the request</returns>
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO dto)
         {
             if (dto is null || dto.Username is null || dto.Password is null) return BadRequest("Invalid data");
-
-                  
+                
             try
             {
 
@@ -59,9 +73,14 @@ namespace QuizballApp.Controllers
         }
 
        
-
-        // GET: api/Gamemasters/5
-       
+        /// <summary>
+        /// Runs asychronously and calls the nessecary
+        /// method of the service layer that permforms 
+        /// the operation of getting an existing gamemaster
+        /// based on the provided id.
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpGet("{id}")]
         [Authorize]
         public async Task<IActionResult> GetGamemaster(int id)
@@ -83,8 +102,16 @@ namespace QuizballApp.Controllers
             }
         }
 
-        // PUT: api/Gamemasters/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Runs asychronously and calls the nessecary
+        /// method of the service layer that performs the
+        /// operation of updating an existing gamemaster
+        /// based on the provided id.
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <param name="dto">(UpdateGamemasterDTO) Contains all the data received from the client
+        ///                             that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPut("{id}")]
         [Authorize]
         public async Task<IActionResult> PutGamemaster(int id, UpdateGamemasterDTO dto)
@@ -128,8 +155,14 @@ namespace QuizballApp.Controllers
             }
         }
 
-        // POST: api/Gamemasters
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that performs the operation
+        /// of updating creating a new gamemaster.
+        /// </summary>
+        /// <param name="dto">(CreateGamemasterDTO) Contains all the data received from the client
+        ///                             that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost("register")]
         public async Task<IActionResult> PostGamemaster(CreateGamemasterDTO dto)
         {
@@ -176,6 +209,14 @@ namespace QuizballApp.Controllers
             }
         }
 
+        /// <summary>
+        /// Runs asychronously and calls the nessecay method
+        /// of the Authentication class that performs the operation
+        /// of authecticating an existing gamemaster. 
+        /// </summary>
+        /// <param name="dto">(CheckGamemastersPassDTO) Contains all the data received from the client
+        ///                             that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPost("checkPass")]
         [Authorize]
         public async Task<IActionResult> CheckGamemasterPass(CheckGamemastersPassDTO dto)
@@ -204,6 +245,16 @@ namespace QuizballApp.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that permform the operation
+        /// of changing the password of an existing gamemaster.
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <param name="dto">(ChangeGamemasterPassDTO) Contains all the data received from the client
+        ///                             that are needed for this operation</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpPut("changePass/{id}")]
         [Authorize]
         public async Task<IActionResult> ChangeGamemasterPass(int id, ChangeGamemasterPassDTO dto)
@@ -229,7 +280,13 @@ namespace QuizballApp.Controllers
         }
 
 
-        // DELETE: api/Gamemasters/5
+        /// <summary>
+        /// Runs asychronously and calls the nessecary method
+        /// of the service layer that performs the operation
+        /// of deleting an existing gamemaster.
+        /// </summary>
+        /// <param name="id">(int) the id of the gamemaster</param>
+        /// <returns>(IActionResult) the response to the request</returns>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task<IActionResult> DeleteGamemaster(int id)

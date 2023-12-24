@@ -8,6 +8,12 @@ using QuizballApp.Data;
 using QuizballApp.DTO.GameDTO;
 using Serilog;
 
+///<summary>
+///This class implements the IGameService interface.
+///Instances can be made out of this class.
+///</summary>>
+
+
 namespace QuizballApp.Services
 {
     public class GameService : IGameService
