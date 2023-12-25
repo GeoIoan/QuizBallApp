@@ -11,15 +11,15 @@ using Microsoft.IdentityModel.Tokens;
 using QuizballApp.Data;
 using QuizballApp.Services;
 
-///<summary>
-///This class is used to controll the incoming requests
-///concerning the Category Entity. Its methods conduct the
-///validation proccess, if needed, and then proceed to call the
-///nessecary methods of the service layer.
-///</summary>>
-
 namespace QuizballApp.Controllers
 {
+    ///<summary>
+    ///This class is used to controll the incoming requests
+    ///concerning the Category Entity. Its methods conduct the
+    ///validation proccess, if needed, and then proceed to call the
+    ///nessecary methods of the service layer.
+    ///</summary>>
+
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

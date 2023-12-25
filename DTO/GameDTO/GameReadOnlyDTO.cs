@@ -2,6 +2,13 @@
 
 namespace QuizballApp.DTO.GameDTO
 {
+    ///<summary>
+    ///Instances of this class are used
+    ///to transfer data needed in order
+    ///to complete the operation of 
+    ///returning to the client the game registry
+    ///that was updated or just created.
+    ///</summary>
     public class GameReadOnlyDTO : BaseDTO
     {
         public string? Type { get; set; }

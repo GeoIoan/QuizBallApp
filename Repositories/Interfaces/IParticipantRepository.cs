@@ -1,11 +1,13 @@
 ﻿using QuizballApp.Data;
-///<summary>
-///This interface contains the extra methods needed by the participant entity related operations
-///apart from those that are inherited by the base repository.
-///<summary>
 
 namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This interface contains the extra methods needed by the participant entity related operations
+    ///apart from those that are inherited by the base repository.
+    ///</summary>
+
     public interface IParticipantRepository
     {
         /// <summary>

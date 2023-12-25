@@ -12,15 +12,15 @@ using QuizballApp.Data;
 using QuizballApp.DTO.ParticipantsDTO;
 using QuizballApp.Services;
 
-
-///<summary>
-///This class is used to handle all the incoming requests
-///concerning the Participant Entity. Its methods conduct the
-///validation proccess, if needed, and then proceed to call the
-///nessecary methods of the service layer.
-///</summary>
 namespace QuizballApp.Controllers
 {
+    ///<summary>
+    ///This class is used to handle all the incoming requests
+    ///concerning the Participant Entity. Its methods conduct the
+    ///validation proccess, if needed, and then proceed to call the
+    ///nessecary methods of the service layer.
+    ///</summary>
+
     [Route("api/[controller]")]
     [ApiController]
     public class ParticipantsController : ControllerBase

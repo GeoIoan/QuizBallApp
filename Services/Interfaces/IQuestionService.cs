@@ -1,15 +1,16 @@
 ﻿using QuizballApp.Data;
 using QuizballApp.DTO;
 using QuizballApp.DTO.QuestionDTO;
-///<summary>
-///This interface contains all the methods that are needed
-///so that the bussiness logic of the question entity can be
-///implemented.
-///</summary>
-
 
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///This interface contains all the methods that are needed
+    ///so that the bussiness logic of the question entity can be
+    ///implemented.
+    ///</summary>
+
     public interface IQuestionService
     {
         /// <summary>

@@ -1,7 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace QuizballApp.DTO
 {
+
+    ///<summary>
+    ///Instances of this class
+    ///transfer the data needed to
+    ///complete the operation of 
+    ///creating a new question.
+    ///</summary>
     public class CreateQuestionDTO
     {
         [StringLength(250, ErrorMessage= "The question should not exceed 250 characters"), 

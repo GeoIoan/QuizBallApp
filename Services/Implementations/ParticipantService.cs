@@ -7,13 +7,14 @@ using QuizballApp.Data;
 using QuizballApp.DTO.ParticipantsDTO;
 using Serilog;
 
-///<summary>
-///Implements that IParticipantService interface. 
-///Instances can be made out of this class.
-///<summary>
-
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///Implements that IParticipantService interface. 
+    ///Instances can be made out of this class.
+    ///</summary>
+
     public class ParticipantService : IParticipantService
     {
         private readonly IUnitOfWork _unitOfWork;

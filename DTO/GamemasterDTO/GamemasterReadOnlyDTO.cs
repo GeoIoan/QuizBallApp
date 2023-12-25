@@ -1,5 +1,7 @@
 ﻿using StudentsDBApp.DTO;
 
+
+
 namespace QuizballApp.DTO.GamemasterDTO
 {
     public class GamemasterReadOnlyDTO : BaseDTO

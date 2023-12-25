@@ -1,11 +1,11 @@
 ﻿using QuizballApp.DTO.GamemasterDTO;
 
-///<summary>
-///This interface contains a method that
-///performs Authentication logic.
-///</summary>
 namespace QuizballApp.Authentication
 {
+    ///<summary>
+    ///This interface contains a method that
+    ///performs Authentication logic.
+    ///</summary>
     public interface IAuth
     {
 

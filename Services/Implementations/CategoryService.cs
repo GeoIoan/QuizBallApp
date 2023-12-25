@@ -7,14 +7,14 @@ using QuizballApp.Data;
 using QuizballApp.DTO.CategoryDTO;
 using Serilog;
 
-///<summary>
-///This class implements the ICategoryService interface.
-///Instances can be made out of this class.
-///</summary>>
-
-
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///This class implements the ICategoryService interface.
+    ///Instances can be made out of this class.
+    ///</summary>
+
     public class CategoryService :  ICategoryService
     {
         private readonly IUnitOfWork _unitOfWork;

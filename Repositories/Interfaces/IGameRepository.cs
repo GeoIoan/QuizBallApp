@@ -1,11 +1,14 @@
 ﻿using QuizballApp.Data;
 using QuizballApp.DTO.GameDTO;
-///<summary>
-///This interface contains the extra methods needed by the game entity related operations
-///apart from those that are inherited by the base repository.
-///<summary>
+
 namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This interface contains the extra methods needed by the game entity related operations
+    ///apart from those that are inherited by the base repository.
+    ///</summary>
+
     public interface IGameRepository
     {
         /// <summary>

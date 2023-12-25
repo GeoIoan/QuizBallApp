@@ -11,14 +11,14 @@ using QuizballApp.DTO.GamemasterDTO;
 using Serilog;
 using UsersApp.Security;
 
-///<summary>
-///This class implements the IGamemasterService interface.
-///Instances can be made out of this class.
-///</summary>>
-
-
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///This class implements the IGamemasterService interface.
+    ///Instances can be made out of this class.
+    ///</summary>
+
     public class GamemasterService : IGamemasterService
     {
         private readonly IUnitOfWork _unitOfWork;

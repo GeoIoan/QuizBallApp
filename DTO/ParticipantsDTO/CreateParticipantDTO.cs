@@ -2,6 +2,14 @@
 
 namespace QuizballApp.DTO.ParticipantsDTO
 {
+
+    ///<summary>
+    ///Instances of this class
+    ///transfer the data needed to
+    ///complete the operation of 
+    ///creating a new participant.
+    ///</summary>
+
     public class CreateParticipantDTO
     {
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Name can be between 3 and 50 characters"),

@@ -3,6 +3,14 @@ using StudentsDBApp.DTO;
 
 namespace QuizballApp.DTO.GamemasterDTO
 {
+
+    ///<summary>
+    ///Instances of this class are used
+    ///to transfer the data needed in order
+    ///to complete the operation that changes
+    ///the password of a gamemaster.
+    ///</summary>
+
     public class ChangeGamemasterPassDTO : BaseDTO
     {
         [StringLength(32, ErrorMessage = "password should not exceed 32 characters")]

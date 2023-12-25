@@ -1,5 +1,6 @@
 ﻿using StudentsDBApp.DTO;
 
+/// not used
 namespace QuizballApp.DTO.GameDTO
 {
     public class GamesEndDTO : BaseDTO

@@ -2,6 +2,9 @@
 
 namespace QuizballApp.DTO.QuestionDTO
 {
+    ///<summary>
+    ///not used
+    ///</summary>
     public class InsertGameToQuestionDTO : BaseDTO
     {
         public string? Type { get; set; }

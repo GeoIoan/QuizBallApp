@@ -3,6 +3,12 @@ using StudentsDBApp.DTO;
 
 namespace QuizballApp.DTO.QuestionDTO
 {
+    ///<summary>
+    ///Instances of this class contain the data
+    ///send as repsonse to the client when the client
+    ///requests the creation of a new participant
+    ///of the update of an existing one.
+    ///</summary>
     public class QuestionReadOnlyDTO : BaseDTO
     {
 

@@ -1,0 +1,21 @@
+[ 25-12-2023 10-56:53 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\ioana\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+ [ 25-12-2023 10-56:54 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:7053" 
+ [ 25-12-2023 10-56:54 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5129" 
+ [ 25-12-2023 10-56:54 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down. 
+ [ 25-12-2023 10-56:54 Microsoft.Hosting.Lifetime ] Hosting environment: "Development" 
+ [ 25-12-2023 10-56:54 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\ioana\source\repos\QuizballApp\QuizballApp\" 
+ [ 25-12-2023 10-56:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger - - 
+ [ 25-12-2023 10-56:59 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/index.html - - 
+ [ 25-12-2023 10-57:03 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger - - - 0 - - 3769.6204ms 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/index.html - - - 200 - text/html;charset=utf-8 5557.4268ms 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/_vs/browserLink - - 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 31.9276ms 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 158.2727ms 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/favicon-32x32.png - - - 0 628 image/png 63.7330ms 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - 
+ [ 25-12-2023 10-57:05 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished HTTP/2 GET https://localhost:7053/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.1187ms 
+ [ 25-12-2023 10-57:46 Microsoft.Hosting.Lifetime ] Application is shutting down... 
+ 

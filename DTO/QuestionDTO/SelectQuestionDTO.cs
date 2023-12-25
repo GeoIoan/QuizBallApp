@@ -1,5 +1,13 @@
 ﻿namespace QuizballApp.DTO.QuestionDTO
 {
+    ///<summary>
+    ///Instances of this class
+    ///transfer the data needed to
+    ///complete the operation of 
+    ///selecting a random question
+    ///of a specific category and
+    ///difficulty level.
+    ///</summary>
     public class SelectQuestionDTO
     {
         public int? Gamemaster_id { get; set; }

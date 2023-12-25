@@ -1,13 +1,13 @@
-﻿///<summary>
-/// This class represents the participant entity. Instances can be made out
-/// of this class holding data like the participants name, the numbers of the wins
-/// the participant achieved and the type of the participant.
-///<summary>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace QuizballApp.Data;
 
+///<summary>
+/// This class represents the participant entity. Instances can be made out
+/// of this class holding data like the participants name, the numbers of the wins
+/// the participant achieved and the type of the participant.
+///</summary>
 public partial class Participant
 {
     public int Id { get; set; }

@@ -1,10 +1,12 @@
-﻿///<summary>
-///This interface contains the basic CRUD operations. The repositories 
-///of all the the entities can extend the impementation of this repository
-///and use any method of the forementioned ones if needed.
-///<summary>
-namespace QuizBall.Repositories
+﻿namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This interface contains the basic CRUD operations. The repositories 
+    ///of all the the entities can extend the impementation of this repository
+    ///and use any method of the forementioned ones if needed.
+    ///</summary>
+
     public interface IBaseRepository<T>
     {
         /// <summary>

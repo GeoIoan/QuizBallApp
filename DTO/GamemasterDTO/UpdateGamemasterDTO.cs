@@ -3,6 +3,13 @@ using StudentsDBApp.DTO;
 
 namespace QuizballApp.DTO.GamemasterDTO
 {
+
+    ///<summary>
+    ///Instances of this class are used to
+    ///transer the data needed to complete the 
+    ///operation that updates an existing gamemaster
+    ///</summary>
+
     public class UpdateGamemasterDTO : BaseDTO
     {
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Username should be between 2 - 50 characters")]

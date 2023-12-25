@@ -1,5 +1,14 @@
 ﻿namespace QuizballApp.DTO.ParticipantsDTO
 {
+
+    ///<summary>
+    ///Instances of this class
+    ///transfer the data needed to
+    ///complete the operation of 
+    ///changing a participants name.
+    ///</summary>>
+
+
     public class ChangeParticipantsNameDTO
     {
         public int ParticipantId { get; set; }

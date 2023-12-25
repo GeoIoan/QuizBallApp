@@ -1,10 +1,12 @@
 ﻿using QuizballApp.Data;
-///<summary>
-///This class implements the IUnitOfWork interface.
-///<summary>
 
 namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This class implements the IUnitOfWork interface.
+    ///<summary>
+
     public class UnitOfWork : IUnitOfWork
     {
         private readonly QuizballDbContext _context;

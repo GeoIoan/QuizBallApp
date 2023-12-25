@@ -3,6 +3,12 @@ using StudentsDBApp.DTO;
 
 namespace QuizballApp.DTO
 {
+    ///<summary>
+    ///Instances of this class
+    ///transfer the data needed to
+    ///complete the operation of 
+    ///updating an existing question.
+    ///</summary>
     public class UpdateQuestionDTO : BaseDTO
     {
         [StringLength(250, ErrorMessage = "The question should not exceed 250 characters"),

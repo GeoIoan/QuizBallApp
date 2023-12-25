@@ -2,6 +2,13 @@
 
 namespace QuizballApp.DTO.GamemasterDTO
 {
+
+    ///<summary>
+    ///Instances of this class are used
+    ///to transfer the data needed
+    ///to complete the login operation
+    ///</summary>
+
     public class LoginDTO
     {
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Username should be between 2 - 50 characters")]

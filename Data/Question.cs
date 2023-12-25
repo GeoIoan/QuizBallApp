@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
+namespace QuizballApp.Data;
+
 ///<summary>
 /// This class represents a question entity. Instances can be made out of this
 /// class that holds data like the questions itself ,its answer and more
-///<summary>
-
-namespace QuizballApp.Data;
-
+///</summary>
 public partial class Question
 {
     public Question()

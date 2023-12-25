@@ -1,15 +1,14 @@
 ﻿
-
 using System;
 using System.Collections.Generic;
+
+namespace QuizballApp.Data;
+
 ///<summary>
 ///This class represents the game entity.Instances can be made
 ///out of this class that can hold data like the type of the game,
 ///the score and the duration.
 ///</summary>
-
-namespace QuizballApp.Data;
-
 public partial class Game
 {
     public int Id { get; set; }

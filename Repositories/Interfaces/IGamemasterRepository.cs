@@ -1,13 +1,14 @@
 ﻿using QuizballApp.Data;
 using QuizballApp.DTO.GamemasterDTO;
 
-///<summary>
-///This interface contains the extra methods needed by the gamemaster entity
-///apart from those that are inherited by the base repository.
-///<summary>
-
 namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This interface contains the extra methods needed by the gamemaster entity
+    ///apart from those that are inherited by the base repository.
+    ///</summary>
+
     public interface IGamemasterRepository
     {
         /// <summary>

@@ -3,14 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
 using QuizballApp.DTO.GamemasterDTO;
 using UsersApp.Security;
-///<summary>
-///This class extends the BaseRepository<T> abstract class and also implements
-///the IGamemasterRepository Interface providing all the needed functionality to
-///the Gamemaster Entity related operations. Instances can be made out of this class.
-///<summary>
 
 namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This class extends the BaseRepository<T> abstract class and also implements
+    ///the IGamemasterRepository Interface providing all the needed functionality to
+    ///the Gamemaster Entity related operations. Instances can be made out of this class.
+    ///</summary>
+
     public class GamemasterRepository : BaseRepository<Gamemaster>, IGamemasterRepository
     {
         public GamemasterRepository(QuizballDbContext context) : base(context)

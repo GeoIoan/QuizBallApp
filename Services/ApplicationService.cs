@@ -1,13 +1,14 @@
 ﻿using AutoMapper;
 using QuizBall.Repositories;
 
-///<summary>
-///This class implements the IApplicationService interface.
-///Instances can be made out of this class.
-///</summary>>
-
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///This class implements the IApplicationService interface.
+    ///Instances can be made out of this class.
+    ///</summary>>
+
     public class ApplicationService : IApplicationService
     {
         private readonly IUnitOfWork _unitOfWork;

@@ -1,10 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using QuizballApp.Services;
 
-
-
 namespace QuizballApp.DTO.GamemasterDTO
 {
+
+    ///<summary>
+    ///Instances of this class can be used to
+    ///complete the operation of creating
+    ///a new gamemaster registry.
+    ///</summary>
+    
     public class CreateGamemasterDTO
     {
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Username should be between 2 - 50 characters")]

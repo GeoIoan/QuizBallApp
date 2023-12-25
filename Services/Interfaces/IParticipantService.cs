@@ -1,13 +1,15 @@
 ﻿using QuizballApp.Data;
 using QuizballApp.DTO.ParticipantsDTO;
-///<summary>
-///This interface contains all the methods that are needed
-///so that the bussiness logic of the participant entity can be
-///implemented.
-///</summary>
 
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///This interface contains all the methods that are needed
+    ///so that the bussiness logic of the participant entity can be
+    ///implemented.
+    ///</summary>
+
     public interface IParticipantService
     {
         /// <summary>

@@ -1,11 +1,12 @@
-﻿///<summary>
-///This class contains methods that perform 
-///encryption and decryption logic.
-///</summary>>
-
-namespace UsersApp.Security
+﻿namespace UsersApp.Security
 {
-	public static class EncryptionUtil
+
+    ///<summary>
+    ///This class contains methods that perform 
+    ///encryption and decryption logic.
+    ///</summary>>
+
+    public static class EncryptionUtil
 	{
 		/// <summary>
 		/// Encrypts a password when a new 

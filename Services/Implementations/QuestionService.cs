@@ -9,12 +9,14 @@ using QuizballApp.DTO;
 using QuizballApp.DTO.QuestionDTO;
 using Serilog;
 
-///<summary>
-///Implements that IQeustionService interface. 
-///Instances can be made out of this class.
-///<summary>
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///Implements that IQeustionService interface. 
+    ///Instances can be made out of this class.
+    ///</summary>
+
     public class QuestionService : IQuestionService
     {
         private readonly IUnitOfWork _unitOfWork;

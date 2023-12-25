@@ -1,5 +1,4 @@
-﻿
-using System.Data.Common;
+﻿using System.Data.Common;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -8,14 +7,14 @@ using QuizballApp.Data;
 using QuizballApp.DTO.GameDTO;
 using Serilog;
 
-///<summary>
-///This class implements the IGameService interface.
-///Instances can be made out of this class.
-///</summary>>
-
-
 namespace QuizballApp.Services
 {
+
+    ///<summary>
+    ///This class implements the IGameService interface.
+    ///Instances can be made out of this class.
+    ///</summary>
+
     public class GameService : IGameService
     {
         private readonly IUnitOfWork _unitOfWork;

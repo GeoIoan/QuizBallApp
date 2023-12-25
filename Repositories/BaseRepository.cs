@@ -1,14 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizballApp.Data;
 
-///<summary>
-///This is and abstract class thtatimplements the IBaseRepository interface.
-///Every repository that needs to use any method that is implemented here must
-///extend this class. No instances can be made out of this class.
-///<summary>
-
 namespace QuizBall.Repositories
 {
+
+    ///<summary>
+    ///This is an abstract class that implements the IBaseRepository interface.
+    ///Every repository that needs to use any method that is implemented here must
+    ///extend this class. No instances can be made out of this class.
+    ///</summary>
+
     public abstract class BaseRepository<T> : IBaseRepository<T>
         where T : class
     {

@@ -15,15 +15,15 @@ using QuizballApp.DTO;
 using QuizballApp.DTO.QuestionDTO;
 using QuizballApp.Services;
 
-///<summary>
-///This class is used to handle all the incoming requests
-///concerning the Question Entity. Its methods conduct the
-///validation proccess, if needed, and then proceed to call the
-///nessecary methods of the service layer.
-///</summary>
-
 namespace QuizballApp.Controllers
 {
+    ///<summary>
+    ///This class is used to handle all the incoming requests
+    ///concerning the Question Entity. Its methods conduct the
+    ///validation proccess, if needed, and then proceed to call the
+    ///nessecary methods of the service layer.
+    ///</summary>
+
     [Route("api/[controller]")]
     [ApiController]
     public class QuestionsController : ControllerBase
