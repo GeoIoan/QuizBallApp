@@ -58,8 +58,6 @@ In the near future, Quizball's frontend will be enhanced using the Angular frame
 - **Serilog.AspNetCore (Version 7.0.0)**: Integration of Serilog for structured logging within ASP.NET Core.
 - **Swashbuckle.AspNetCore (Version 6.5.0)**: Library for generating Swagger/OpenAPI documentation, enhancing the API's accessibility and documentation.
 
-With this comprehensive technology stack and architectural approach, Quizball promises an engaging and customizable quiz gaming experience, further elevated by a future-enhanced frontend developed using the Angular framework.
+With this comprehensive technology stack and architectural approach, Quizball promises an engaging and customizable quiz gaming experience.
 
 Thank you for exploring Quizball!
-
-*Doc comments will be added soon!
